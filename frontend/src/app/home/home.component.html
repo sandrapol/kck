@@ -1,0 +1,10 @@
+<p>
+  {{name}}
+</p>
+<div>
+  <label>
+    <input type="file" (change)="selectFile($event)">
+  </label>
+  <button class="singlebutton" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+  <button class="singlebutton"  (click)="hellwig()">Upload</button>
+</div>
