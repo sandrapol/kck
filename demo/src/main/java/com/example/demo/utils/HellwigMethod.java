@@ -8,6 +8,7 @@ import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static java.lang.Math.abs;
 
@@ -22,7 +23,9 @@ public class HellwigMethod {
     private double[] R0 = null;
     private double[][] RMatrix;
     private int combinationsNumber;
-    private List<Combination> combinationsList;
+    private List<Combination> combinationsList = new ArrayList<>();
+    private double max;
+
     public void chooseVariables(String fileName) {
         dataGenerator = new DataGenerator(fileName);
         dividedData = dataGenerator.getDividedData();
@@ -30,31 +33,41 @@ public class HellwigMethod {
         y = dividedData.getYdata();
         generateR0();
         generateRMatrix();
-        combinationsNumber= 2^(dataX[0].length)-1;
-        combinationsList=new ArrayList<>();
+        combinationsNumber = 2 ^ (dataX[0].length) - 1;
         createNCr();
         countAllCapacity();
-        combinationsList.forEach(elem->elem.calculateCapacity());
-        //combinationsList.map(elem->elem.getCapacitySum());
-        combinationsList.forEach(elem->elem.ttring());
+        combinationsList.forEach(elem -> elem.calculateCapacity());
+        getMax();
+        combinationsList.stream().filter(elem->elem.getCapacitySum()==max);
+        combinationsList.forEach(elem -> elem.ttring());
+    }
+    public Double[][] getDividedData(){
+        dividedData.getHellwigData(combinationsList.get(0).getIndexesVariable());
+        return  dividedData.getDataMatrix();
+    }
+    public int[] getIndexes(){
+        return combinationsList.get(0).getIndexesVariable();
+    }
+    public Double[] getY(){
+        return dividedData.getYdata();
+    }
+    private void countAllCapacity() {
+        combinationsList.forEach(elem -> elem.setInformationCapacity(countCapacity(elem.getIndexesVariable())));
+    }
 
-    }
-    private void countAllCapacity(){
-        combinationsList.forEach(elem-> elem.setInformationCapacity(countCapacity(elem.getIndexesVariable())));
-    }
-    private double[] countCapacity(int[] variableIndexes){
-        double[] cap= new double[variableIndexes.length];
+    private double[] countCapacity(int[] variableIndexes) {
+        double[] cap = new double[variableIndexes.length];
         double numerator;
-        for(int i=0;i<variableIndexes.length;i++) {
-            double denominator=0;
+        for (int i = 0; i < variableIndexes.length; i++) {
+            double denominator = 0;
             numerator = R0[variableIndexes[i]] * R0[variableIndexes[i]];
             for (int j = 0; j < variableIndexes.length; j++) {
                 int num = variableIndexes[j];
-                denominator =denominator +abs(RMatrix[variableIndexes[i]][num]);
+                denominator = denominator + abs(RMatrix[variableIndexes[i]][num]);
             }
             System.out.println(denominator);
             System.out.println(numerator);
-            cap[i]=numerator/denominator;
+            cap[i] = numerator / denominator;
         }
         return cap;
     }
@@ -97,10 +110,15 @@ public class HellwigMethod {
         return new PearsonsCorrelation().correlation(ArrayUtils.toPrimitive(Variable1), ArrayUtils.toPrimitive(Variable2));
     }
 
-    private void createNCr(){
-        int len=dataX[0].length;
-        for(int i=1;i<=len; i++){
-            nCr(len,i);
+    private void getMax() {
+        max = combinationsList.stream().map(elem -> elem.getCapacitySum()).mapToDouble(v -> v).max()
+                .orElseThrow(NoSuchElementException::new);
+    }
+
+    private void createNCr() {
+        int len = dataX[0].length;
+        for (int i = 1; i <= len; i++) {
+            nCr(len, i);
         }
     }
 
@@ -111,7 +129,7 @@ public class HellwigMethod {
         }
         boolean done = false;
         while (!done) {
-            Combination combination=new Combination(Arrays.stream(res).map(elem->elem-1).toArray());
+            Combination combination = new Combination(Arrays.stream(res).map(elem -> elem - 1).toArray());
             combinationsList.add(combination);
             done = getNext(res, n, r);
         }

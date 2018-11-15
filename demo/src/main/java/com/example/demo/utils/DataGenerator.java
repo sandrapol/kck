@@ -1,6 +1,7 @@
 package com.example.demo.utils;
 
 import com.example.demo.models.DividedData;
+import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -75,14 +76,6 @@ public class DataGenerator {
         }
         dataMatrix = new Double[lines.size()][0];
         lines.toArray(dataMatrix);
-        /*String lineSeparator = System.lineSeparator();
-        StringBuilder sb = new StringBuilder();
-        for (Double[] row : dataMatrix) {
-            sb.append(Arrays.toString(row))
-                    .append(lineSeparator);
-        }
-        String result = sb.toString();
-        System.out.println(result);*/
     }
 
     private void findYIndex() {

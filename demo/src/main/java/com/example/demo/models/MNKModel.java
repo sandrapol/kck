@@ -1,9 +1,8 @@
 package com.example.demo.models;
 
-import Jama.Matrix;
+import org.ejml.simple.SimpleMatrix;
 
 import javax.persistence.*;
-import java.util.Arrays;
 
 /**
  * Created by Sandra on 2018-11-02.
@@ -17,38 +16,33 @@ public class MNKModel {
     private Long id;
     @Column(name = "MNK_NAME")
     private String name;
-    @Column(name = "MAT_X")
-    private Matrix X;
-    @Column(name = "MAT_Y")
-    private Matrix Y;
     @Column(name = "PARAMETERS")
-    private double[] parameters;
+    private SimpleMatrix parameters;
+    @Column(name = "HEADERS")
+    private String[] headers;
     @Column(name = "RESIDUAL_VARIANCE")
     private double residualVariance;
     @Column(name = "STANDARD_DEVIATION")
     private double standardDeviation;
     @Column(name = "AVERAGE_ESTIMATE_ERROR")
     private double AverageEstimateError;
+    @Column(name = "CRV")
+    private double CRV;
+    @Column(name = "R2")
+    private double R2;
 
-    public MNKModel(){}
+    public MNKModel() {}
 
-    public MNKModel(Long id, String name, Matrix x, Matrix y, double[] parameters, double residualVariance, double standardDeviation, double averageEstimateError) {
+    public MNKModel(Long id, String name) {
         this.id = id;
         this.name = name;
-        X = x;
-        Y = y;
-        this.parameters = parameters;
-        this.residualVariance = residualVariance;
-        this.standardDeviation = standardDeviation;
-        AverageEstimateError = averageEstimateError;
+    }
+    public String[] getHeaders() {
+        return headers;
     }
 
-    public MNKModel(Long id, String name, Matrix x, Matrix y) {
-        this.id = id;
-        this.name = name;
-
-        X = x;
-        Y = y;
+    public void setHeaders(String[] headers) {
+        this.headers = headers;
     }
 
     public Long getId() {
@@ -67,27 +61,11 @@ public class MNKModel {
         this.name = name;
     }
 
-    public Matrix getX() {
-        return X;
-    }
-
-    public void setX(Matrix x) {
-        X = x;
-    }
-
-    public Matrix getY() {
-        return Y;
-    }
-
-    public void setY(Matrix y) {
-        Y = y;
-    }
-
-    public double[] getParameters() {
+    public SimpleMatrix getParameters() {
         return parameters;
     }
 
-    public void setParameters(double[] parameters) {
+    public void setParameters(SimpleMatrix parameters) {
         this.parameters = parameters;
     }
 
@@ -115,17 +93,19 @@ public class MNKModel {
         AverageEstimateError = averageEstimateError;
     }
 
-    @Override
-    public String toString() {
-        return "MNKModel{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", X=" + X +
-                ", Y=" + Y +
-                ", parameters=" + Arrays.toString(parameters) +
-                ", residualVariance=" + residualVariance +
-                ", standardDeviation=" + standardDeviation +
-                ", AverageEstimateError=" + AverageEstimateError +
-                '}';
+    public double getCRV() {
+        return CRV;
+    }
+
+    public void setCRV(double CRV) {
+        this.CRV = CRV;
+    }
+
+    public double getR2() {
+        return R2;
+    }
+
+    public void setR2(double r2) {
+        R2 = r2;
     }
 }

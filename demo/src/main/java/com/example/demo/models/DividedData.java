@@ -1,5 +1,7 @@
 package com.example.demo.models;
 
+import org.apache.commons.lang3.ArrayUtils;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -33,6 +35,24 @@ public class DividedData {
 
     public DividedData() {
     }
+    public void getHellwigData(int[] headersInex)
+    {
+        int row = dataMatrix.length;
+        int col = dataMatrix[0].length;
+        Double[][] xArray = new Double[row][headersInex.length]; //new Array will have one column less
+        int currColumn=0;
+        for (int j=0; j < col; j++) {
+            if (ArrayUtils.contains(headersInex, j)) {
+                for (int i = 0; i < row; i++) {
+                    xArray[i][currColumn] = dataMatrix[i][j];
+
+                }
+                currColumn++;
+            }
+        }
+        dataMatrix=xArray;
+    }
+
     public DividedData(String fileName) {
         this.fileName=fileName;
     }

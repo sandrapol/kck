@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.exceptions.FileNotValidException;
 import com.example.demo.utils.HellwigMethod;
+import com.example.demo.utils.MNKGenerator;
 import com.example.demo.utils.ResponseFactory;
 import com.example.demo.validators.CsvValidation;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 
 import static com.example.demo.utils.ConstantFields.SUCCESS;
 import static com.example.demo.utils.ConstantFields.fileLocalServerDirection;
@@ -31,6 +33,7 @@ import static com.example.demo.utils.ConstantFields.fileLocalServerDirection;
 @RequestMapping("/api")
 public class UploadController {
     HellwigMethod hellwigMethod=new HellwigMethod();
+    MNKGenerator mnkGenerator=new MNKGenerator();
     @PostMapping(value = "/upload")
     public ResponseEntity<String> upload(@RequestParam MultipartFile file) {
 
@@ -62,6 +65,10 @@ public class UploadController {
     @RequestMapping (value = "/hellwig")
     public ResponseEntity<String> R0(@RequestParam String fileName) {
         hellwigMethod.chooseVariables(fileName);
+        System.out.print("wybrano: "+ Arrays.toString(hellwigMethod.getIndexes()));
+        System.out.println("Matrix wybranych danych:"+ Arrays.deepToString(hellwigMethod.getDividedData() ));
+       // mnkGenerator.createMNK(hellwigMethod.getDividedData(),hellwigMethod.getY());
+        mnkGenerator.check();
         return ResponseEntity.ok().header(SUCCESS,"Variables chosen!").build();
     }
 }
