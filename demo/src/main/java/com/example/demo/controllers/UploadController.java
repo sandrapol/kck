@@ -89,7 +89,7 @@ public class UploadController {
 
     /**
      * tworzy model z danymi z hellwiga, ale najpierw musi byc wywolana /hellwig
-     * @return model, jeszcze sie nie w jsonie  rzuca bledami, ale mowilam dlaczego
+     * @return utworzony model
      */
     @RequestMapping(value="/mnkWithHellwig")
     public ResponseEntity<MNKModel> mnkWithHellwig() {
@@ -98,6 +98,10 @@ public class UploadController {
         return ResponseEntity.ok(mnk);
     }
 
+/**
+ * tworzy model ze wszystkimi danymi, ale najpierw musi byc wywolana /hellwig
+ * @return utworzony model
+ */
     @RequestMapping(value="/newMNK")
     public ResponseEntity<MNKModel> newMNK(@RequestParam String fileName){
         DataGenerator  dataGenerator= new DataGenerator(fileName);
@@ -106,6 +110,8 @@ public class UploadController {
         mnk = mnkGenerator.createMNK(dividedData.getDataMatrix(), dividedData.getYdata(),dividedData.getHeaders());
         return ResponseEntity.ok(mnk);
     }
+
+    
     @RequestMapping(value="/predict")
     public ResponseEntity<MNKModel> predicate(@RequestParam int from, @RequestParam int to){
         return ResponseEntity.ok(mnk);

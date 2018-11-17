@@ -1,7 +1,5 @@
 package com.example.demo.models;
 
-import org.ejml.simple.SimpleMatrix;
-
 import java.util.List;
 
 /**
@@ -11,13 +9,13 @@ import java.util.List;
 public class MNKModel {
     private List<String> headers;
 
-    private SimpleMatrix parameters;
+    private double[] parameters;
 
     private double residualVariance;
 
     private double standardDeviation;
 
-    private SimpleMatrix  AverageEstimateError;
+    private double[]  AverageEstimateError;
 
     private double CRV;
 
@@ -29,11 +27,11 @@ public class MNKModel {
         this.headers=headers;
     }
 
-    public SimpleMatrix getParameters() {
+    public double[] getParameters() {
         return parameters;
     }
 
-    public void setParameters(SimpleMatrix parameters) {
+    public void setParameters(double[] parameters) {
         this.parameters = parameters;
     }
 
@@ -53,12 +51,12 @@ public class MNKModel {
         this.standardDeviation = standardDeviation;
     }
 
-    public SimpleMatrix  getAverageEstimateError() {
+    public double[]  getAverageEstimateError() {
         return AverageEstimateError;
     }
 
-    public void setAverageEstimateError(SimpleMatrix  averageEstimateError) {
-        AverageEstimateError = averageEstimateError;
+    public void setAverageEstimateError(double[]  averageEstimateError) {
+        this.AverageEstimateError = averageEstimateError;
     }
 
     public double getCRV() {

@@ -2,44 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bacbd65-0f4f-45b8-a181-c84f295a55c5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_197.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_17_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_8_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/components/UserCommands.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/MNKController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/repositories/UserRepo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/controllers/MNKController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/controllers/UserController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/models/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/repositories/UserRepo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/hellwig.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/controllers/UploadController.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/controllers/UploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/models/MNKModel.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/models/MNKModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/MNKGenerator.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/MNKGenerator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/pom.xml" afterPath="$PROJECT_DIR$/demo/src/main/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/demo/src/main/target/" />
@@ -64,8 +31,8 @@
       <file leaf-file-name="HellwigMethod.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-71">
-              <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="656">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding>
                 <element signature="method#newHeaders#0;class#HellwigMethod#0" expanded="false" />
                 <element signature="method#countAllCapacity#0;class#HellwigMethod#0" expanded="false" />
@@ -115,16 +82,14 @@
       <file leaf-file-name="MNKModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+            <state relative-caret-position="296">
+              <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#MNKModel#0;class#MNKModel#0" expanded="false" />
-                <element signature="e#485#486#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#699#700#0" expanded="true" />
-                <element signature="method#setAverageEstimateError#0;class#MNKModel#0" expanded="false" />
+                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#645#646#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,12 +98,10 @@
       <file leaf-file-name="MNKGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+            <state relative-caret-position="152">
+              <caret line="67" column="50" lean-forward="true" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1805#1806#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,8 +110,8 @@
       <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+            <state relative-caret-position="376">
+              <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,10 +185,10 @@
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/Combination.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/DataGenerator.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/DividedData.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java" />
         <option value="$PROJECT_DIR$/demo/src/main/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" />
       </list>
     </option>
@@ -671,7 +634,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="728" extended-state="1" />
+    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -740,7 +703,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -749,13 +712,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="47" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="12" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -1034,25 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="method#newHeaders#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#countAllCapacity#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#countCapacity#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#generateR0#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#generateRMatrix#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#getCorrelation#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#getMax#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#createNCr#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#nCr#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#getNext#0;class#HellwigMethod#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1085,38 +1022,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        <state relative-caret-position="656">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MNKModel#0;class#MNKModel#0" expanded="false" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="method#setAverageEstimateError#0;class#MNKModel#0" expanded="false" />
+            <element signature="method#newHeaders#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#countAllCapacity#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#countCapacity#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#generateR0#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#generateRMatrix#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#getCorrelation#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#getMax#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#createNCr#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#nCr#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#getNext#0;class#HellwigMethod#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/ejml/ejml-core/0.37/ejml-core-0.37.jar!/org/ejml/data/DMatrixRMaj.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        <state relative-caret-position="152">
+          <caret line="67" column="50" lean-forward="true" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1805#1806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <element signature="method#MNKModel#0;class#MNKModel#0" expanded="false" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+        <state relative-caret-position="376">
+          <caret line="113" column="4" lean-forward="false" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

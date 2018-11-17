@@ -73,8 +73,6 @@ public class HellwigMethod {
                 int num = variableIndexes[j];
                 denominator = denominator + abs(RMatrix[variableIndexes[i]][num]);
             }
-            System.out.println(denominator);
-            System.out.println(numerator);
             cap[i] = numerator / denominator;
         }
         return cap;

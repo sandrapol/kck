@@ -50,13 +50,19 @@ public class MNKGenerator {
         SimpleMatrix xtx1 = xData.transpose().mult(xData).invert();
         SimpleMatrix xty = xData.transpose().mult(yData);
         params = xtx1.mult(xty);
-
-
     }
     //extractVector(false,0)
     private void paramsToList(){
-        mnkModel.setParameters(params);
+        double[] parameters= new double[params.numRows()];
+        params.print();
+        for(int i=0;i<params.numRows();i++)
+        {
+            System.out.println(params.get(i,0));
+            parameters[i]=params.get(i,0);
+        }
+        mnkModel.setParameters(parameters);
     }
+
     private void countVariance() {
         SimpleMatrix yModelData = xData.mult(params);
         SimpleMatrix et = yData.minus(yModelData);
@@ -71,7 +77,14 @@ public class MNKGenerator {
         SimpleMatrix varCovMatrix = xtx1.scale(variance);
         SimpleMatrix diag = varCovMatrix.diag();
         SimpleMatrix averageEstimateError = diag.elementPower(0.5);
-        mnkModel.setAverageEstimateError(averageEstimateError);
+        double[] avgErr= new double[averageEstimateError.numRows()];
+        averageEstimateError.print();
+        for(int i=0;i<averageEstimateError.numRows();i++)
+        {
+            System.out.println(averageEstimateError.get(i,0));
+           avgErr[i]=averageEstimateError.get(i,0);
+        }
+        mnkModel.setAverageEstimateError(avgErr);
         double avg = yData.elementSum() / rowsNumber;
         double CRV= (standardDeviation/avg)*100; //wspolczynnik zmiennosci resztowej w %
         mnkModel.setCRV(CRV);
