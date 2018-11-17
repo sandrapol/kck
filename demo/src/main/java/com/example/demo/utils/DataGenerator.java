@@ -1,7 +1,6 @@
 package com.example.demo.utils;
 
 import com.example.demo.models.DividedData;
-import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -23,7 +22,7 @@ public class DataGenerator {
     private int yIndex=-1;
     private List<String> headers = new ArrayList<>();
     private BufferedReader reader;
-    String currentLine;
+    private String currentLine;
 
 
     public DataGenerator(String fileName) {
