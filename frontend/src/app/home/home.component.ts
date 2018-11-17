@@ -38,7 +38,14 @@ export class HomeComponent implements OnInit {
       this.uploadServ.checkHellwig(this.fileName).subscribe(
         event => { console.log('Variables chosen'); },
         err => { console.log(err); },
-        () => {}
+        () => {this.mnk()}
       );
     }
+  mnk(){
+    this.uploadServ.mnkWithHellwig('udalo sie').subscribe(
+      event => { console.log('MNK created'); },
+      err => { console.log(err); },
+      () => {}
+    );
+  }
 }

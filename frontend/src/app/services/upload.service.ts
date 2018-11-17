@@ -25,4 +25,8 @@ export class UploadService {
         const params = new HttpParams().set('fileName', fileName);
         return this.http.get('api/hellwig', { params });
     }
+    mnkWithHellwig(name: string) {
+        //const params = new HttpParams().set('newModelName', name);
+        return this.http.get('api/mnkWithHellwig');
+    }
 }

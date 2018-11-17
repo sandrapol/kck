@@ -39,7 +39,7 @@ public class HellwigMethod {
         combinationsList.forEach(elem -> elem.calculateCapacity());
         getMax();
         combinationsList.stream().filter(elem->elem.getCapacitySum()==max);
-        combinationsList.forEach(elem -> elem.ttring());
+        newHeaders();
     }
     public Double[][] getDividedData(){
         dividedData.getHellwigData(combinationsList.get(0).getIndexesVariable());
@@ -50,6 +50,14 @@ public class HellwigMethod {
     }
     public Double[] getY(){
         return dividedData.getYdata();
+    }
+    public List<String> getHeaders(){return dividedData.getHeaders();}
+    private void newHeaders(){
+        List<String> headers = dividedData.getHeaders();
+        List<String> newHeaders= new ArrayList<>();
+        int[] indexesVariable = combinationsList.get(0).getIndexesVariable();
+        Arrays.stream(indexesVariable).forEach(elem->newHeaders.add(headers.get(elem)) );
+        dividedData.setHeaders(newHeaders);
     }
     private void countAllCapacity() {
         combinationsList.forEach(elem -> elem.setInformationCapacity(countCapacity(elem.getIndexesVariable())));

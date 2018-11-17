@@ -2,63 +2,31 @@ package com.example.demo.models;
 
 import org.ejml.simple.SimpleMatrix;
 
-import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Sandra on 2018-11-02.
  */
-@Entity
-@Table(name="MNKMODEL")
+
 public class MNKModel {
-    @Id
-    @GeneratedValue
-    @Column(name = "MNK_ID", nullable = false)
-    private Long id;
-    @Column(name = "MNK_NAME")
-    private String name;
-    @Column(name = "PARAMETERS")
+    private List<String> headers;
+
     private SimpleMatrix parameters;
-    @Column(name = "HEADERS")
-    private String[] headers;
-    @Column(name = "RESIDUAL_VARIANCE")
+
     private double residualVariance;
-    @Column(name = "STANDARD_DEVIATION")
+
     private double standardDeviation;
-    @Column(name = "AVERAGE_ESTIMATE_ERROR")
-    private double AverageEstimateError;
-    @Column(name = "CRV")
+
+    private SimpleMatrix  AverageEstimateError;
+
     private double CRV;
-    @Column(name = "R2")
+
     private double R2;
 
-    public MNKModel() {}
-
-    public MNKModel(Long id, String name) {
-        this.id = id;
-        this.name = name;
+    public MNKModel() {
     }
-    public String[] getHeaders() {
-        return headers;
-    }
-
-    public void setHeaders(String[] headers) {
-        this.headers = headers;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public MNKModel(List<String> headers) {
+        this.headers=headers;
     }
 
     public SimpleMatrix getParameters() {
@@ -85,11 +53,11 @@ public class MNKModel {
         this.standardDeviation = standardDeviation;
     }
 
-    public double getAverageEstimateError() {
+    public SimpleMatrix  getAverageEstimateError() {
         return AverageEstimateError;
     }
 
-    public void setAverageEstimateError(double averageEstimateError) {
+    public void setAverageEstimateError(SimpleMatrix  averageEstimateError) {
         AverageEstimateError = averageEstimateError;
     }
 

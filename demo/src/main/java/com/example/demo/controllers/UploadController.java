@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.exceptions.FileNotValidException;
+import com.example.demo.models.MNKModel;
 import com.example.demo.utils.HellwigMethod;
 import com.example.demo.utils.MNKGenerator;
 import com.example.demo.utils.ResponseFactory;
@@ -32,8 +33,8 @@ import static com.example.demo.utils.ConstantFields.fileLocalServerDirection;
 @RestController
 @RequestMapping("/api")
 public class UploadController {
-    HellwigMethod hellwigMethod=new HellwigMethod();
-    MNKGenerator mnkGenerator=new MNKGenerator();
+    private HellwigMethod hellwigMethod;
+    private MNKGenerator mnkGenerator;
     @PostMapping(value = "/upload")
     public ResponseEntity<String> upload(@RequestParam MultipartFile file) {
 
@@ -63,13 +64,21 @@ public class UploadController {
             return ResponseFactory.ResponseError("File is not valid", "error details: File doesn't exist!");
     }
     @RequestMapping (value = "/hellwig")
-    public ResponseEntity<String> R0(@RequestParam String fileName) {
+    public ResponseEntity<String> countHellwig(@RequestParam String fileName) {
+        hellwigMethod=new HellwigMethod();
         hellwigMethod.chooseVariables(fileName);
         System.out.print("wybrano: "+ Arrays.toString(hellwigMethod.getIndexes()));
         System.out.println("Matrix wybranych danych:"+ Arrays.deepToString(hellwigMethod.getDividedData() ));
-       // mnkGenerator.createMNK(hellwigMethod.getDividedData(),hellwigMethod.getY());
-        mnkGenerator.check();
         return ResponseEntity.ok().header(SUCCESS,"Variables chosen!").build();
+    }
+
+    @RequestMapping(value="/mnkWithHellwig")
+    public ResponseEntity<String> mnkWithHellwig() {
+        mnkGenerator=new MNKGenerator();
+        MNKModel mnk = mnkGenerator.createMNK(hellwigMethod.getDividedData(), hellwigMethod.getY(),hellwigMethod.getHeaders());
+
+        System.out.println(mnk.toString());
+        return ResponseEntity.ok().header(SUCCESS,"Model build").build();
     }
 }
 

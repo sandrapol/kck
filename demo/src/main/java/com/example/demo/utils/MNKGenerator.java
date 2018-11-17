@@ -13,20 +13,22 @@ import static java.lang.Math.sqrt;
  */
 public class MNKGenerator {
     private MNKModel mnkModel;
-    private List<String> headers;
     private SimpleMatrix xData;
     private SimpleMatrix yData;
     private SimpleMatrix params;
-    private double rowsNumber;
+    private int rowsNumber;
     private double colNumber;
 
-    public void createMNK(Double[][] firstDataMatrix, Double[] yMatrix) {
+    public MNKModel createMNK(Double[][] firstDataMatrix, Double[] yMatrix, List<String> headers) {
+        mnkModel= new MNKModel(headers);
         rowsNumber = yMatrix.length;
         colNumber = firstDataMatrix[0].length;
         prepareXMatrix(firstDataMatrix);
         yData = new SimpleMatrix(yMatrix.length, 1, false, ArrayUtils.toPrimitive(yMatrix));
         countParameters();
         countVariance();
+        paramsToList();
+        return mnkModel;
     }
 
     private void prepareXMatrix(Double[][] firstDataMatrix) {
@@ -48,28 +50,34 @@ public class MNKGenerator {
         SimpleMatrix xtx1 = xData.transpose().mult(xData).invert();
         SimpleMatrix xty = xData.transpose().mult(yData);
         params = xtx1.mult(xty);
-    }
 
+
+    }
+    //extractVector(false,0)
+    private void paramsToList(){
+        mnkModel.setParameters(params);
+    }
     private void countVariance() {
         SimpleMatrix yModelData = xData.mult(params);
         SimpleMatrix et = yData.minus(yModelData);
         SimpleMatrix et2 = et.elementMult(et);
         double sum = et2.elementSum();
         double variance = (1 / (rowsNumber - colNumber - 1)) * sum;
+        mnkModel.setResidualVariance(variance);
         double standardDeviation = sqrt(variance);
+        mnkModel.setStandardDeviation(standardDeviation);
         System.out.println(variance);
         SimpleMatrix xtx1 = xData.transpose().mult(xData).invert();
         SimpleMatrix varCovMatrix = xtx1.scale(variance);
         SimpleMatrix diag = varCovMatrix.diag();
         SimpleMatrix averageEstimateError = diag.elementPower(0.5);
-        averageEstimateError.print();
+        mnkModel.setAverageEstimateError(averageEstimateError);
         double avg = yData.elementSum() / rowsNumber;
         double CRV= (standardDeviation/avg)*100; //wspolczynnik zmiennosci resztowej w %
+        mnkModel.setCRV(CRV);
         double sumYT = yData.minus(avg).elementPower(2).elementSum();
         double R2 = 1 - (sum / sumYT);
-        System.out.println(CRV);
-        System.out.println(R2);
-
+        mnkModel.setR2(R2);
     }
 
 }
