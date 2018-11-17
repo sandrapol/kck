@@ -1,7 +1,9 @@
 package com.example.demo.controllers;
 
 import com.example.demo.exceptions.FileNotValidException;
+import com.example.demo.models.DividedData;
 import com.example.demo.models.MNKModel;
+import com.example.demo.utils.DataGenerator;
 import com.example.demo.utils.HellwigMethod;
 import com.example.demo.utils.MNKGenerator;
 import com.example.demo.utils.ResponseFactory;
@@ -20,7 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
+import java.util.List;
 
 import static com.example.demo.utils.ConstantFields.SUCCESS;
 import static com.example.demo.utils.ConstantFields.fileLocalServerDirection;
@@ -35,9 +37,14 @@ import static com.example.demo.utils.ConstantFields.fileLocalServerDirection;
 public class UploadController {
     private HellwigMethod hellwigMethod;
     private MNKGenerator mnkGenerator;
+    private MNKModel mnk;
+
+    /**
+     * Wrzuca plik do folderu resources
+     * Zwraca komunikat o sukcesie lub błędzie
+     * */
     @PostMapping(value = "/upload")
     public ResponseEntity<String> upload(@RequestParam MultipartFile file) {
-
         try {
             CsvValidation csvValidation = new CsvValidation();
             if (!file.isEmpty()) {
@@ -48,12 +55,16 @@ public class UploadController {
                 is.close();
                 return ResponseEntity.ok("File was uploaded");
             }
-            return ResponseEntity.badRequest().header("This file is already on S3").build();
+            return ResponseEntity.badRequest().header("This file is empty!").build();
         } catch (FileNotValidException | IOException exception) {
             return ResponseFactory.ResponseError("File is not valid", "error details: " + exception.getMessage());
         }
     }
 
+    /**
+     * Usuwa plik
+     * Zwraca komunikat o sukcesie lub błędzie
+     */
     @RequestMapping (value = "/deleteFile")
     public ResponseEntity<String> deleteFile(@RequestParam String fileName) {
 
@@ -63,22 +74,41 @@ public class UploadController {
         } else
             return ResponseFactory.ResponseError("File is not valid", "error details: File doesn't exist!");
     }
+
+    /**
+     *
+     * Wywołuje metode hellwiga i wybiera zmienne
+     * @return lista z wybranymi naglówkami
+     */
     @RequestMapping (value = "/hellwig")
-    public ResponseEntity<String> countHellwig(@RequestParam String fileName) {
+    public ResponseEntity<List<String>> countHellwig(@RequestParam String fileName) {
         hellwigMethod=new HellwigMethod();
         hellwigMethod.chooseVariables(fileName);
-        System.out.print("wybrano: "+ Arrays.toString(hellwigMethod.getIndexes()));
-        System.out.println("Matrix wybranych danych:"+ Arrays.deepToString(hellwigMethod.getDividedData() ));
-        return ResponseEntity.ok().header(SUCCESS,"Variables chosen!").build();
+        return ResponseEntity.ok(hellwigMethod.getHeaders());
     }
 
+    /**
+     * tworzy model z danymi z hellwiga, ale najpierw musi byc wywolana /hellwig
+     * @return model, jeszcze sie nie w jsonie  rzuca bledami, ale mowilam dlaczego
+     */
     @RequestMapping(value="/mnkWithHellwig")
-    public ResponseEntity<String> mnkWithHellwig() {
+    public ResponseEntity<MNKModel> mnkWithHellwig() {
         mnkGenerator=new MNKGenerator();
-        MNKModel mnk = mnkGenerator.createMNK(hellwigMethod.getDividedData(), hellwigMethod.getY(),hellwigMethod.getHeaders());
+        mnk = mnkGenerator.createMNK(hellwigMethod.getDividedData(), hellwigMethod.getY(),hellwigMethod.getHeaders());
+        return ResponseEntity.ok(mnk);
+    }
 
-        System.out.println(mnk.toString());
-        return ResponseEntity.ok().header(SUCCESS,"Model build").build();
+    @RequestMapping(value="/newMNK")
+    public ResponseEntity<MNKModel> newMNK(@RequestParam String fileName){
+        DataGenerator  dataGenerator= new DataGenerator(fileName);
+        DividedData dividedData=dataGenerator.getDividedData();
+        mnkGenerator =new MNKGenerator();
+        mnk = mnkGenerator.createMNK(dividedData.getDataMatrix(), dividedData.getYdata(),dividedData.getHeaders());
+        return ResponseEntity.ok(mnk);
+    }
+    @RequestMapping(value="/predict")
+    public ResponseEntity<MNKModel> predicate(@RequestParam int from, @RequestParam int to){
+        return ResponseEntity.ok(mnk);
     }
 }
 

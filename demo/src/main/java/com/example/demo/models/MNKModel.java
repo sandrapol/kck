@@ -76,4 +76,17 @@ public class MNKModel {
     public void setR2(double r2) {
         R2 = r2;
     }
+
+    @Override
+    public String toString() {
+        return "MNKModel{" +
+                "headers=" + headers +
+                ", parameters=" + parameters +
+                ", residualVariance=" + residualVariance +
+                ", standardDeviation=" + standardDeviation +
+                ", AverageEstimateError=" + AverageEstimateError +
+                ", CRV=" + CRV +
+                ", R2=" + R2 +
+                '}';
+    }
 }
