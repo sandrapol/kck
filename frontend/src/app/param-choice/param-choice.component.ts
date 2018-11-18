@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./param-choice.component.css']
 })
 export class ParamChoiceComponent implements OnInit {
-
+  private loading=false;
   private choosenHeaders:any;
 
   constructor(private upService :UploadService,private router: Router) { }
@@ -17,26 +17,31 @@ export class ParamChoiceComponent implements OnInit {
   }
 
   hellwigMethodChoosen(){
+    this.loading=true;
     this.upService.hellwigMethod().subscribe(
       elem=> {this.choosenHeaders=elem},
-      err=>(console.log("Error while choosing hellwig!"))
+      err=>(console.log("Error while choosing hellwig!")),
+      ()=>{this.loading=false;}
     )
   }
   modelWithHellwig(){
+    this.loading=true;
     this.upService.mnkWithHellwig().subscribe(
       event => { console.log('Model created'); },
       err => { console.log(err); },
-      () => {this.submit(); }
+      () => {this.loading=false; this.submit(); }
     );
   }
   createModel(){
+    this.loading=true;
     this.upService.newMNK().subscribe(
       event => { console.log('Model created'); },
       err => { console.log(err); },
-      () => {this.submit(); }
+      () => {this.loading=false; this.submit(); }
     );
   }
   submit(){
+    this.loading=true;
     this.router.navigateByUrl('/modelDetails');
   }
 }
