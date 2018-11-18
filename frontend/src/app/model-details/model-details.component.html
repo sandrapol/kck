@@ -3,22 +3,22 @@
   <app-loading></app-loading>
 </div>
 <div class="cont" *ngIf="!loading">
-    <p>Headers:</p>
-    <p>{{mnk.parameters[0]}}</p>
-  <tr *ngFor="let header of mnk.headers">
-    <td> {{header}} </td>
-    <td> {{getParam(header)}} </td>
-  </tr>
+  <p>Headers:</p>
+  <div style="display: inline">y= {{mnk.parameters[0]}} </div>
+  <div  style="display: inline" *ngFor="let header of mnk.headers">
+    + {{header}} *
+    {{getParam(header)}}
+  </div>
   <p>Errors:</p>
   <tr *ngFor="let averageEstimateErro of mnk.averageEstimateError">
-      <td> {{averageEstimateErro}} </td>
+    <td> {{averageEstimateErro}} </td>
   </tr>
   <p>CRV</p>
- <p>{{mnk.crv}}</p> 
- <p>R2</p>
- <p>{{mnk.r2}}</p> 
- <p>residualVariance</p>
- <p>{{mnk.residualVariance}}</p> 
- <p>standardDeviation</p>
- <p>{{mnk.standardDeviation}}</p> 
+  <p>{{mnk.crv}}</p>
+  <p>R2</p>
+  <p>{{mnk.r2}}</p>
+  <p>residualVariance</p>
+  <p>{{mnk.residualVariance}}</p>
+  <p>standardDeviation</p>
+  <p>{{mnk.standardDeviation}}</p>
 </div>
