@@ -1,3 +1,4 @@
+import { ModelDetailsComponent } from './model-details/model-details.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -17,8 +18,7 @@ import { LoadingComponent } from './loading/loading.component';
     MainComponent,
     HeaderComponent,
     ParamChoiceComponent,
-    LoadingComponent
-    ParamChoiceComponent,
+    LoadingComponent,
     ModelDetailsComponent
   ],
   imports: [
