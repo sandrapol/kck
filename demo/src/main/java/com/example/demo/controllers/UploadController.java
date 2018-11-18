@@ -135,6 +135,13 @@ public class UploadController {
         else
             return ResponseFactory.ResponseError("Model not found!", "Model doesn't exist");
     }
+    @RequestMapping("/getHeaders")
+    public ResponseEntity<List<String>> getHeaders(){
+        if (mnk != null)
+            return ResponseEntity.ok(mnk.getHeaders());
+        else
+            return ResponseFactory.ResponseError("Model not found!", "Model doesn't exist");
+    }
 
 
     @RequestMapping(value = "/predict")
