@@ -21,5 +21,11 @@ export class ParamChoiceComponent implements OnInit {
       err=>(console.log("Error while choosing hellwig!"))
     )
   }
+  modelWithHellwig(){
+   
+  }
+  createModel(){
+ 
+  }
 
 }
