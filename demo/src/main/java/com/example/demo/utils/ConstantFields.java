@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
  */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ConstantFields {
-    public static final String fileLocalServerDirection = "demo/src/main/resources/";
+    public static final String fileLocalServerDirection = "C:\\Users\\Admin\\kck\\demo\\src\\main\\resources\\";
     public static final String COMPLETED = "COMPLETED";
     public static final String FAILED = "FAILED";
     public static final String SUCCESS= "SUCCESS";
