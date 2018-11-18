@@ -10,12 +10,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.example.demo.utils.ConstantFields.fileLocalServerDirection;
+
 
 /**
  * Created by Sandra on 2018-11-03.
  */
 public class DataGenerator {
-    public static String fileLocalServerDirection = "demo/src/main/resources/";
     private DividedData dividedData;
     private String fileName;
     private Double[][] dataMatrix;
