@@ -16,11 +16,6 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    this.uploadServ.getString().subscribe(
-      elem => this.name = elem,
-      err => { console.log(err); });
-
   }
   selectFile(event) {
     this.selectedFiles = event.target.files;
@@ -28,21 +23,21 @@ export class HomeComponent implements OnInit {
   upload() {
     this.currentFileUpload = this.selectedFiles.item(0);
     this.fileName= this.currentFileUpload.name;
-    this.uploadServ.pushFileToStorage(this.currentFileUpload).subscribe(
+    this.uploadServ.pushFileToStorage(this.currentFileUpload,this.fileName).subscribe(
       event => { console.log('File is completely uploaded!'); },
       err => { console.log(err); },
       () => {}
     );
     }
     hellwig(){
-      this.uploadServ.checkHellwig(this.fileName).subscribe(
+      this.uploadServ.hellwigMethod().subscribe(
         event => { console.log('Variables chosen'); },
         err => { console.log(err); },
         () => {this.mnk()}
       );
     }
   mnk(){
-    this.uploadServ.mnkWithHellwig('udalo sie').subscribe(
+    this.uploadServ.mnkWithHellwig().subscribe(
       event => { console.log('MNK created'); },
       err => { console.log(err); },
       () => {}

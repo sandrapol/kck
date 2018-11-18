@@ -3,11 +3,9 @@ package com.example.demo.controllers;
 import com.example.demo.exceptions.FileNotValidException;
 import com.example.demo.models.DividedData;
 import com.example.demo.models.MNKModel;
-import com.example.demo.utils.DataGenerator;
-import com.example.demo.utils.HellwigMethod;
-import com.example.demo.utils.MNKGenerator;
-import com.example.demo.utils.ResponseFactory;
+import com.example.demo.utils.*;
 import com.example.demo.validators.CsvValidation;
+import com.example.demo.validators.HeadersValidation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
@@ -38,17 +36,21 @@ public class UploadController {
     private HellwigMethod hellwigMethod;
     private MNKGenerator mnkGenerator;
     private MNKModel mnk;
-
+    private Predictions predictions;
+    private String currentFile;
     /**
      * Wrzuca plik do folderu resources
      * Zwraca komunikat o sukcesie lub błędzie
-     * */
+     */
     @PostMapping(value = "/upload")
     public ResponseEntity<String> upload(@RequestParam MultipartFile file) {
         try {
             CsvValidation csvValidation = new CsvValidation();
+            HeadersValidation headersValidation=new HeadersValidation();
             if (!file.isEmpty()) {
+                currentFile=file.getOriginalFilename();
                 csvValidation.validate(file.getOriginalFilename());
+                headersValidation.validate(file.getOriginalFilename());
                 InputStream is = file.getInputStream();
                 File targetFile = new File(fileLocalServerDirection + file.getOriginalFilename());
                 FileUtils.copyInputStreamToFile(is, targetFile);
@@ -65,55 +67,71 @@ public class UploadController {
      * Usuwa plik
      * Zwraca komunikat o sukcesie lub błędzie
      */
-    @RequestMapping (value = "/deleteFile")
+    @RequestMapping(value = "/deleteFile")
     public ResponseEntity<String> deleteFile(@RequestParam String fileName) {
 
         File file = new File(fileLocalServerDirection + fileName);
         if (file.delete()) {
-            return ResponseEntity.ok().header(SUCCESS,"File " + fileName + " was deleted!").build();
+            return ResponseEntity.ok().header(SUCCESS, "File " + fileName + " was deleted!").build();
         } else
             return ResponseFactory.ResponseError("File is not valid", "error details: File doesn't exist!");
     }
 
     /**
-     *
      * Wywołuje metode hellwiga i wybiera zmienne
+     *
      * @return lista z wybranymi naglówkami
      */
-    @RequestMapping (value = "/hellwig")
-    public ResponseEntity<List<String>> countHellwig(@RequestParam String fileName) {
-        hellwigMethod=new HellwigMethod();
-        hellwigMethod.chooseVariables(fileName);
+    @RequestMapping(value = "/hellwig")
+    public ResponseEntity<List<String>> countHellwig() {
+        try {
+            hellwigMethod = new HellwigMethod();
+            hellwigMethod.chooseVariables(currentFile);
+        } catch (Exception e) {
+            return ResponseFactory.ResponseError("Data not found!", "File doesn't exist");
+        }
         return ResponseEntity.ok(hellwigMethod.getHeaders());
     }
 
     /**
      * tworzy model z danymi z hellwiga, ale najpierw musi byc wywolana /hellwig
+     *
      * @return utworzony model
      */
-    @RequestMapping(value="/mnkWithHellwig")
+    @RequestMapping(value = "/mnkWithHellwig")
     public ResponseEntity<MNKModel> mnkWithHellwig() {
-        mnkGenerator=new MNKGenerator();
-        mnk = mnkGenerator.createMNK(hellwigMethod.getDividedData(), hellwigMethod.getY(),hellwigMethod.getHeaders());
+        try {
+            mnkGenerator = new MNKGenerator();
+            mnk = mnkGenerator.createMNK(hellwigMethod.getDividedData(), hellwigMethod.getY(), hellwigMethod.getHeaders());
+        } catch (Exception e) {
+            return ResponseFactory.ResponseError("Data not found!", "File doesn't exist");
+        }
         return ResponseEntity.ok(mnk);
     }
 
-/**
- * tworzy model ze wszystkimi danymi, ale najpierw musi byc wywolana /hellwig
- * @return utworzony model
- */
-    @RequestMapping(value="/newMNK")
-    public ResponseEntity<MNKModel> newMNK(@RequestParam String fileName){
-        DataGenerator  dataGenerator= new DataGenerator(fileName);
-        DividedData dividedData=dataGenerator.getDividedData();
-        mnkGenerator =new MNKGenerator();
-        mnk = mnkGenerator.createMNK(dividedData.getDataMatrix(), dividedData.getYdata(),dividedData.getHeaders());
+    /**
+     * tworzy model ze wszystkimi danymi, ale najpierw musi byc wywolana /hellwig
+     *
+     * @return utworzony model
+     */
+    @RequestMapping(value = "/newMNK")
+    public ResponseEntity<MNKModel> newMNK() {
+        try {
+            DataGenerator dataGenerator = new DataGenerator(currentFile);
+            DividedData dividedData = dataGenerator.getDividedData();
+            mnkGenerator = new MNKGenerator();
+            mnk = mnkGenerator.createMNK(dividedData.getDataMatrix(), dividedData.getYdata(), dividedData.getHeaders());
+        } catch (Exception e) {
+            return ResponseFactory.ResponseError("Data not found!", "File doesn't exist");
+        }
         return ResponseEntity.ok(mnk);
     }
 
-    
-    @RequestMapping(value="/predict")
-    public ResponseEntity<MNKModel> predicate(@RequestParam int from, @RequestParam int to){
+
+    @RequestMapping(value = "/predict")
+    public ResponseEntity<MNKModel> predicate(@RequestParam int from, @RequestParam int to) {
+
+        predictions.createPredictions(from, to, mnk.getParameters());
         return ResponseEntity.ok(mnk);
     }
 }
