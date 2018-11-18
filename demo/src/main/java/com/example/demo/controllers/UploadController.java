@@ -37,7 +37,7 @@ public class UploadController {
     private MNKGenerator mnkGenerator;
     private MNKModel mnk;
     private Predictions predictions;
-
+    private String currentFile;
     /**
      * Wrzuca plik do folderu resources
      * Zwraca komunikat o sukcesie lub błędzie
@@ -48,6 +48,7 @@ public class UploadController {
             CsvValidation csvValidation = new CsvValidation();
             HeadersValidation headersValidation=new HeadersValidation();
             if (!file.isEmpty()) {
+                currentFile=file.getOriginalFilename();
                 csvValidation.validate(file.getOriginalFilename());
                 headersValidation.validate(file.getOriginalFilename());
                 InputStream is = file.getInputStream();
@@ -82,10 +83,10 @@ public class UploadController {
      * @return lista z wybranymi naglówkami
      */
     @RequestMapping(value = "/hellwig")
-    public ResponseEntity<List<String>> countHellwig(@RequestParam String fileName) {
+    public ResponseEntity<List<String>> countHellwig() {
         try {
             hellwigMethod = new HellwigMethod();
-            hellwigMethod.chooseVariables(fileName);
+            hellwigMethod.chooseVariables(currentFile);
         } catch (Exception e) {
             return ResponseFactory.ResponseError("Data not found!", "File doesn't exist");
         }
@@ -114,9 +115,9 @@ public class UploadController {
      * @return utworzony model
      */
     @RequestMapping(value = "/newMNK")
-    public ResponseEntity<MNKModel> newMNK(@RequestParam String fileName) {
+    public ResponseEntity<MNKModel> newMNK() {
         try {
-            DataGenerator dataGenerator = new DataGenerator(fileName);
+            DataGenerator dataGenerator = new DataGenerator(currentFile);
             DividedData dividedData = dataGenerator.getDividedData();
             mnkGenerator = new MNKGenerator();
             mnk = mnkGenerator.createMNK(dividedData.getDataMatrix(), dividedData.getYdata(), dividedData.getHeaders());

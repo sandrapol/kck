@@ -10,7 +10,7 @@ public class Predictions {
     List<Prediction> predictionList= new ArrayList<>();
     public void createPredictions(int from, int to, double[] params)
     {
-        
+
 
     }
 }

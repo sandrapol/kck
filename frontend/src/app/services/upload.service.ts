@@ -5,27 +5,28 @@ import { Observable, of } from 'rxjs';
     providedIn: 'root'
 })
 export class UploadService {
+    fileName: string;
     constructor(
         private http: HttpClient
     ) { };
 
-    getString() {
-        return this.http.get('api/cos');
-    }
-    pushFileToStorage(file: File): Observable<HttpEvent<{}>> {
+    pushFileToStorage(file: File, name: string): Observable<HttpEvent<{}>> {
+        this.fileName = name;
         const formdata: FormData = new FormData();
         formdata.append('file', file);
         const req = new HttpRequest('POST', 'api/upload', formdata, {
-          reportProgress: true,
-          responseType: 'text'
+            reportProgress: true,
+            responseType: 'text'
         });
         return this.http.request(req);
-      }
-       checkHellwig(fileName: string) {
-        const params = new HttpParams().set('fileName', fileName);
-        return this.http.get('api/hellwig', { params });
     }
-    mnkWithHellwig(name: string) {
+
+    hellwigMethod() {
+        
+        return this.http.get('api/hellwig');
+    }
+
+    mnkWithHellwig() {
         //const params = new HttpParams().set('newModelName', name);
         return this.http.get('api/mnkWithHellwig');
     }

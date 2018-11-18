@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="cont">
+  <div class="hellwig">
+    <p>Czy chcesz użyć metody Hellwiga do wyboru zmiennych?</p>
+    <div class="hellwigButtons">
+      <label class="button" (click)="hellwigMethodChoosen()">+-----+<br> | Tak |<br>
+        +-----+</label>
+      <label class="button" (click)="createModel()">+-----+<br> | Nie |<br>
+        +-----+</label>
+    </div>
+  </div>
+  <div *ngIf="choosenHeaders">
+    <tr *ngFor="let choosenHeader of choosenHeaders">
+      <td> {{choosenHeader}} </td>
+    </tr>
+  </div>
+  <div *ngIf="choosenHeaders" class="hellwig">
+      <p>Czy chcesz użyć tych zmiennych do stworzenia modelu, czy wszystkich?</p>
+      <div class="hellwigButtons">
+        <label class="button" (click)="modelWithHellwig()">+-----+<br> | Tak |<br>
+          +-----+</label>
+        <label class="button" (click)="createModel()">+-----+<br> | Nie |<br>
+          +-----+</label>
+      </div>
+    </div>
+</div>
