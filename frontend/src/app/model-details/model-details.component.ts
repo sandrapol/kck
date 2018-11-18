@@ -21,5 +21,9 @@ export class ModelDetailsComponent implements OnInit {
       ()=>this.loading=false
     ); 
   }
+  getParam(header: string){
+    const index=this.mnk.headers.indexOf(header);
+    return this.mnk.parameters[index+1]
+  }
 
 }
