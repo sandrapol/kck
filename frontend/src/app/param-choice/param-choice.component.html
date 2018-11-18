@@ -1,11 +1,12 @@
 <app-header></app-header>
 <div class="cont">
+  <div *ngIf="!loading">
   <div *ngIf="!choosenHeaders" class="hellwig">
     <p>Czy chcesz użyć metody Hellwiga do wyboru zmiennych?</p>
     <div class="hellwigButtons">
-      <label class="button" (click)="hellwigMethodChoosen()">+-----+<br> | Tak |<br>
+      <label class="button1" (click)="hellwigMethodChoosen()">+-----+<br> | Tak |<br>
         +-----+</label>
-      <label class="button" (click)="createModel()">+-----+<br> | Nie |<br>
+      <label class="button2" (click)="createModel()">+-----+<br> | Nie |<br>
         +-----+</label>
     </div>
   </div>
@@ -18,11 +19,14 @@
   <div *ngIf="choosenHeaders" class="hellwig">
     <p>Czy chcesz użyć tych zmiennych do stworzenia modelu, czy wszystkich?</p>
     <div class="hellwigButtons">
-      <label class="button" (click)="modelWithHellwig()">+-----+<br> | Tak |<br>
+      <label class="button1" (click)="modelWithHellwig()">+-----+<br> | Tak |<br>
         +-----+</label>
-      <label class="button" (click)="createModel()">+-----+<br> | Nie |<br>
+      <label class="button2" (click)="createModel()">+-----+<br> | Nie |<br>
         +-----+</label>
     </div>
   </div>
+</div>
+<div *ngIf ="loading">
   <app-loading></app-loading>
+</div>
 </div>

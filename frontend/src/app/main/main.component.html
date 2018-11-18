@@ -1,44 +1,48 @@
 <div class="cont">
-  <div class="napis">
-    <div><span style="color:#447294;"> ..`8.`888b...............,8'..8 8888.8888888
-        8888888888...888..................8.8888</span></div>
-    <div><span style="color:#5381a2;"> .`8.`888b...............,8'...8 8888.......8 8888........8888..................8
-        8888</span></div>
-    <div><span style="color:#6290b0;"> ..`8.`888b.............,8'....8 8888.......8 8888.......:88888.................8
-        8888</span></div>
-    <div><span style="color:#719ebf;"> ...`8.`888b......b....,8'.....8 8888.......8 8888....... `88888................8
-        8888</span></div>
-    <div><span style="color:#80adcd;"> ....`8.`888b....88b..,8'......8 8888.......8 8888......8. `88888...............8
-        8888</span></div>
-    <div><span style="color:#8fbcdb;"> .....`8.`888b .`888b,8'.......8 8888.......8 8888.....8`8. `88888..............8
-        8888</span></div>
-    <div><span style="color:#87cbc5;"> ......`8.`888b8.`8888'........8 8888.......8 8888....8'.`8. `88888. 88.........8
-        8888</span></div>
-    <div><span style="color:#7edab0;"> .......`8.`888`8.`88'.........8 8888.......8 8888...8'...`8. `88888.`88........8
-        888'</span></div>
-    <div><span style="color:#76e99a;"> ........`8.`8'.`8,`'..........8 8888.......8 8888 .888888888. `88888. `88o.....8
-        88'.</span></div>
-    <div><span style="color:#6df884;"> .........`8.`...`8'...........8 8888.......8 8888.8'.......`8. `88888.
-        ..`Y888888'...</span></div>
-  </div>
-  <div class="welcome">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi condimentum massa mi, ut semper tellus dictum
-    elementum. Pellentesque vitae velit quis odio tempus mattis quis at est. Quisque ac fringilla velit, eget euismod
-    erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas magna
-    dui, sagittis at lorem rutrum, tempus tincidunt nisi. Phasellus elementum sed nisi nec rhoncus. Nunc pretium, diam
-    in blandit dapibus, purus enim bibendum ligula, tincidunt gravida ligula orci at erat. Ut sit amet dictum eros. In
-    laoreet elementum nisi. Maecenas leo felis, commodo eu lacus eu, sollicitudin interdum sem. Mauris ex justo,
-    tincidunt sed odio ut, interdum mollis libero. Aenean venenatis vel elit vitae tincidunt.
-  </div>
+    <div class="napis">
+        <div><span style="color:#447294;"> ..`8.`888b...............,8'..8 8888.8888888
+                8888888888...888..................8.8888</span></div>
+        <div><span style="color:#5381a2;"> .`8.`888b...............,8'...8 8888.......8
+                8888........8888..................8
+                8888</span></div>
+        <div><span style="color:#6290b0;"> ..`8.`888b.............,8'....8 8888.......8
+                8888.......:88888.................8
+                8888</span></div>
+        <div><span style="color:#719ebf;"> ...`8.`888b......b....,8'.....8 8888.......8 8888.......
+                `88888................8
+                8888</span></div>
+        <div><span style="color:#80adcd;"> ....`8.`888b....88b..,8'......8 8888.......8 8888......8.
+                `88888...............8
+                8888</span></div>
+        <div><span style="color:#8fbcdb;"> .....`8.`888b .`888b,8'.......8 8888.......8 8888.....8`8.
+                `88888..............8
+                8888</span></div>
+        <div><span style="color:#87cbc5;"> ......`8.`888b8.`8888'........8 8888.......8 8888....8'.`8. `88888.
+                88.........8
+                8888</span></div>
+        <div><span style="color:#7edab0;"> .......`8.`888`8.`88'.........8 8888.......8 8888...8'...`8.
+                `88888.`88........8
+                888'</span></div>
+        <div><span style="color:#76e99a;"> ........`8.`8'.`8,`'..........8 8888.......8 8888 .888888888. `88888.
+                `88o.....8
+                88'.</span></div>
+        <div><span style="color:#6df884;"> .........`8.`...`8'...........8 8888.......8 8888.8'.......`8. `88888.
+                ..`Y888888'...</span></div>
+    </div>
+    <div class="welcome">
+        Proszę wybrać plik z danymi. Plik MUSI być w formacie .csv.<br> Naglowek odpowiadający zmiennej objasnianej
+        musi nosić nazwę "y" lub "Y". <br>
+        Na kolejnej stronie będziesz w stanie wybrać które zmienne zostaną użyte w modelu ekonometrycznym.
+    </div>
 
 
-  <div class="upload">
-    <input hidden id="input-file-id" type="file" (change)="selectFile($event)">
-    <label for="input-file-id" class="uploadbutton">+--------------+<br> | Wybierz plik |<br>
-      +--------------+</label>
-    <label class="name">{{fileName ? fileName : 'plik'}}</label>
-    <label *ngIf="fileName" class="uploadbutton" (click)="upload()">+----+<br> | OK |<br>
-      +----+</label>
-  </div>
+    <div class="upload">
+        <input hidden id="input-file-id" type="file" (change)="selectFile($event)">
+        <label for="input-file-id" class="uploadbutton">+--------------+<br> | Wybierz plik |<br>
+            +--------------+</label>
+        <label class="name">{{fileName ? fileName : 'plik'}}</label>
+        <label *ngIf="fileName" class="uploadbutton" (click)="upload()">+----+<br> | OK |<br>
+            +----+</label>
+    </div>
 
 </div>
