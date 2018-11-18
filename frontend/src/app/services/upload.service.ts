@@ -30,4 +30,10 @@ export class UploadService {
         //const params = new HttpParams().set('newModelName', name);
         return this.http.get('api/mnkWithHellwig');
     }
+    newMNK(){
+        return this.http.get('api/newMNK');
+    }
+    getMNK(){
+        return this.http.get('api/getMNK');
+    }
 }

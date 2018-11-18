@@ -1,5 +1,6 @@
 import { UploadService } from './../services/upload.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-param-choice',
@@ -10,7 +11,7 @@ export class ParamChoiceComponent implements OnInit {
 
   private choosenHeaders:any;
 
-  constructor(private upService :UploadService) { }
+  constructor(private upService :UploadService,private router: Router) { }
 
   ngOnInit() {
   }
@@ -22,10 +23,20 @@ export class ParamChoiceComponent implements OnInit {
     )
   }
   modelWithHellwig(){
-   
+    this.upService.mnkWithHellwig().subscribe(
+      event => { console.log('Model created'); },
+      err => { console.log(err); },
+      () => {this.submit(); }
+    );
   }
   createModel(){
- 
+    this.upService.newMNK().subscribe(
+      event => { console.log('Model created'); },
+      err => { console.log(err); },
+      () => {this.submit(); }
+    );
   }
-
+  submit(){
+    this.router.navigateByUrl('/modelDetails');
+  }
 }
