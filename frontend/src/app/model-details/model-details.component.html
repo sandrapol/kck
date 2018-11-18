@@ -3,22 +3,22 @@
   <app-loading></app-loading>
 </div>
 <div class="cont" *ngIf="!loading">
-  <p>Headers:</p>
-  <div style="display: inline">y= {{mnk.parameters[0]}} </div>
-  <div  style="display: inline" *ngFor="let header of mnk.headers">
-    + {{header}} *
-    {{getParam(header)}}
-  </div>
-  <p>Errors:</p>
+  <p>Postać modelu:</p>
+  <p>y = {{mnk.parameters[0]}} + {{getParam(></p>
+  <tr *ngFor="let header of mnk.headers">
+    <td> {{header}} </td>
+    <td> {{getParam(header)}} </td>
+  </tr>
+  <p>Bledy ocen parametrów:</p>
   <tr *ngFor="let averageEstimateErro of mnk.averageEstimateError">
     <td> {{averageEstimateErro}} </td>
   </tr>
-  <p>CRV</p>
+  <p>Wspólczynnik zmiennosci resztowej</p>
   <p>{{mnk.crv}}</p>
-  <p>R2</p>
+  <p>Wspólczynnik determinacji R2:</p>
   <p>{{mnk.r2}}</p>
-  <p>residualVariance</p>
+  <p>Wariancja resztowa:</p>
   <p>{{mnk.residualVariance}}</p>
-  <p>standardDeviation</p>
+  <p>Odchylenie standardowe:</p>
   <p>{{mnk.standardDeviation}}</p>
 </div>
