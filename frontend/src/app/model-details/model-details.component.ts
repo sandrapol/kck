@@ -10,6 +10,7 @@ import { MNK } from './MNK';
 export class ModelDetailsComponent implements OnInit {
 
   private mnk: any;
+  private headers: any;
   private loading = true;
   constructor(private upServ: UploadService) { }
 
@@ -17,8 +18,8 @@ export class ModelDetailsComponent implements OnInit {
     this.upServ.getMNK().subscribe(
       elems=> {this.mnk=elems; console.log(this.mnk)},
       err=>{console.log(err)},
-      ()=> this.loading=false
-    )
+      ()=>this.loading=false
+    ); 
   }
 
 }

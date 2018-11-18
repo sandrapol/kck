@@ -27,6 +27,10 @@ public class MNKModel {
         this.headers=headers;
     }
 
+    public List<String> getHeaders() {
+        return headers;
+    }
+
     public double[] getParameters() {
         return parameters;
     }

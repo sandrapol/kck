@@ -2,6 +2,25 @@
 <div *ngIf="loading">
   <app-loading></app-loading>
 </div>
-<div *ngIf="!loading">
-  <p>kosdola</p>
+<div class="cont" *ngIf="!loading">
+    <p>Headers:</p>
+  <tr *ngFor="let header of mnk.headers; trackBy: trackByModels">
+    <td> {{header}} </td>
+  </tr>
+  <p>Parameters</p>
+  <tr *ngFor="let patameter of mnk.parameters; trackBy: trackByModels">
+    <td> {{patameter}} </td>
+  </tr>
+  <p>Errors:</p>
+  <tr *ngFor="let averageEstimateErro of mnk.averageEstimateError; trackBy: trackByModels">
+      <td> {{averageEstimateErro}} </td>
+  </tr>
+  <p>CRV</p>
+ <p>{{mnk.crv}}</p> 
+ <p>R2</p>
+ <p>{{mnk.r2}}</p> 
+ <p>residualVariance</p>
+ <p>{{mnk.residualVariance}}</p> 
+ <p>standardDeviation</p>
+ <p>{{mnk.standardDeviation}}</p> 
 </div>

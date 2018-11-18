@@ -36,4 +36,7 @@ export class UploadService {
     getMNK(){
         return this.http.get('api/getMNK');
     }
+    getHeaders(){
+        return this.http.get('api/getHeaders');
+    }
 }
