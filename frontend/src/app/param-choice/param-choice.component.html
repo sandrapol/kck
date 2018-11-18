@@ -16,15 +16,13 @@
     </tr>
   </div>
   <div *ngIf="choosenHeaders" class="hellwig">
-      <p>Czy chcesz użyć tych zmiennych do stworzenia modelu, czy wszystkich?</p>
-      <div class="hellwigButtons">
-        <label class="button" (click)="modelWithHellwig()">+-----+<br> | Tak |<br>
-          +-----+</label>
-        <label class="button" (click)="createModel()">+-----+<br> | Nie |<br>
-          +-----+</label>
-      </div>
+    <p>Czy chcesz użyć tych zmiennych do stworzenia modelu, czy wszystkich?</p>
+    <div class="hellwigButtons">
+      <label class="button" (click)="modelWithHellwig()">+-----+<br> | Tak |<br>
+        +-----+</label>
+      <label class="button" (click)="createModel()">+-----+<br> | Nie |<br>
+        +-----+</label>
     </div>
-    <div>
-      <img class="swiniak" src = "assets/images/swiniak2.gif">
-    </div>
+  </div>
+  <app-loading></app-loading>
 </div>

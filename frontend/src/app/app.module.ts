@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { ParamChoiceComponent } from './param-choice/param-choice.component';
-import { ModelDetailsComponent } from './model-details/model-details.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,8 @@ import { ModelDetailsComponent } from './model-details/model-details.component';
     HomeComponent,
     MainComponent,
     HeaderComponent,
+    ParamChoiceComponent,
+    LoadingComponent
     ParamChoiceComponent,
     ModelDetailsComponent
   ],
