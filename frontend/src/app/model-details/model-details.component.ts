@@ -1,4 +1,6 @@
+import { UploadService } from './../services/upload.service';
 import { Component, OnInit } from '@angular/core';
+import { MNK } from './MNK';
 
 @Component({
   selector: 'app-model-details',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelDetailsComponent implements OnInit {
 
-  constructor() { }
+  private mnk: any;
+  private loading = true;
+  constructor(private upServ: UploadService) { }
 
   ngOnInit() {
+    this.upServ.getMNK().subscribe(
+      elems=> {this.mnk=elems; console.log(this.mnk)},
+      err=>{console.log(err)},
+      ()=> this.loading=false
+    )
   }
 
 }
