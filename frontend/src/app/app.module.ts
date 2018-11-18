@@ -10,6 +10,7 @@ import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { ParamChoiceComponent } from './param-choice/param-choice.component';
 import { LoadingComponent } from './loading/loading.component';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoadingComponent } from './loading/loading.component';
     HeaderComponent,
     ParamChoiceComponent,
     LoadingComponent,
-    ModelDetailsComponent
+    ModelDetailsComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,

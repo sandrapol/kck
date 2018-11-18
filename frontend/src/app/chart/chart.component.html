@@ -1,0 +1,19 @@
+<p>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta charset="UTF-8">
+            <title>asciichart</title>
+            <script src="asciichart.ts"></script>
+            <script type="text/typescript">
+                var s0 = new Array (120)
+                for (var i = 0; i < s0.length; i++)
+                    s0[i] = 15 * Math.sin (i * ((Math.PI * 4) / s0.length))
+                console.log (asciichart.plot (s0))
+            </script>
+        </head>
+        <body>
+        </body>
+    </html>
+</p>
