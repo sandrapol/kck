@@ -38,6 +38,7 @@ public class UploadController {
     private MNKModel mnk;
     private Predictions predictions;
     private String currentFile;
+
     /**
      * Wrzuca plik do folderu resources
      * Zwraca komunikat o sukcesie lub błędzie
@@ -46,9 +47,9 @@ public class UploadController {
     public ResponseEntity<String> upload(@RequestParam MultipartFile file) {
         try {
             CsvValidation csvValidation = new CsvValidation();
-            HeadersValidation headersValidation=new HeadersValidation();
+            HeadersValidation headersValidation = new HeadersValidation();
             if (!file.isEmpty()) {
-                currentFile=file.getOriginalFilename();
+                currentFile = file.getOriginalFilename();
                 csvValidation.validate(file.getOriginalFilename());
                 headersValidation.validate(file.getOriginalFilename());
                 InputStream is = file.getInputStream();
@@ -99,14 +100,14 @@ public class UploadController {
      * @return utworzony model
      */
     @RequestMapping(value = "/mnkWithHellwig")
-    public ResponseEntity<MNKModel> mnkWithHellwig() {
+    public ResponseEntity<String> mnkWithHellwig() {
         try {
             mnkGenerator = new MNKGenerator();
             mnk = mnkGenerator.createMNK(hellwigMethod.getDividedData(), hellwigMethod.getY(), hellwigMethod.getHeaders());
         } catch (Exception e) {
             return ResponseFactory.ResponseError("Data not found!", "File doesn't exist");
         }
-        return ResponseEntity.ok(mnk);
+        return ResponseEntity.ok().header(SUCCESS, "Model created!").build();
     }
 
     /**
@@ -115,7 +116,7 @@ public class UploadController {
      * @return utworzony model
      */
     @RequestMapping(value = "/newMNK")
-    public ResponseEntity<MNKModel> newMNK() {
+    public ResponseEntity<String> newMNK() {
         try {
             DataGenerator dataGenerator = new DataGenerator(currentFile);
             DividedData dividedData = dataGenerator.getDividedData();
@@ -124,7 +125,15 @@ public class UploadController {
         } catch (Exception e) {
             return ResponseFactory.ResponseError("Data not found!", "File doesn't exist");
         }
-        return ResponseEntity.ok(mnk);
+        return ResponseEntity.ok().header(SUCCESS, "Model created!").build();
+    }
+
+    @RequestMapping(value = "/getMNK")
+    public ResponseEntity<MNKModel> getMNK() {
+        if (mnk != null)
+            return ResponseEntity.ok(mnk);
+        else
+            return ResponseFactory.ResponseError("Model not found!", "Model doesn't exist");
     }
 
 
