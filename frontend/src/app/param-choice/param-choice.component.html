@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="cont">
-  <div class="hellwig">
+  <div *ngIf="!choosenHeaders" class="hellwig">
     <p>Czy chcesz użyć metody Hellwiga do wyboru zmiennych?</p>
     <div class="hellwigButtons">
       <label class="button" (click)="hellwigMethodChoosen()">+-----+<br> | Tak |<br>
@@ -10,6 +10,7 @@
     </div>
   </div>
   <div *ngIf="choosenHeaders">
+    <p>Metodą Helliwga wybrano zmienne:</p>
     <tr *ngFor="let choosenHeader of choosenHeaders">
       <td> {{choosenHeader}} </td>
     </tr>
