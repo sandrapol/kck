@@ -12,6 +12,7 @@ export class PredictionComponent implements OnInit {
   private headers: any;
   private params: [ number];
   private prediction;
+  private err:any;
   constructor(private upServ: UploadService, private router: Router) { }
 
   ngOnInit() {
@@ -28,8 +29,8 @@ export class PredictionComponent implements OnInit {
   predict(){
     this.upServ.predict(this.params).subscribe(
       elem => { this.prediction = elem },
-      err => {},
-      () => { this.roundIt() }
+      err => {this.err=err.headers.get('error_details'); console.log(this.err);},
+      () => { this.roundIt(); this.err=false; }
     )
    console.log(this.params);
   }

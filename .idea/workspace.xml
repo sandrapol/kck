@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bacbd65-0f4f-45b8-a181-c84f295a55c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/param-choice/param-choice.component.css" afterPath="$PROJECT_DIR$/frontend/src/app/param-choice/param-choice.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/param-choice/param-choice.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/param-choice/param-choice.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/prediction/prediction.component.css" afterPath="$PROJECT_DIR$/frontend/src/app/prediction/prediction.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/prediction/prediction.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/prediction/prediction.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/prediction/prediction.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/prediction/prediction.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/demo/src/main/target/" />

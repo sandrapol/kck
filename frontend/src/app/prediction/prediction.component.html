@@ -1,6 +1,7 @@
 <app-header></app-header>
 <div class="cont">
   <p style="margin-bottom:40px;">Proszę wprowadzić przewidywane wartości zmiennych objaśnianych.</p>
+  <p class="error" *ngIf="err">{{err}}</p>
   <tr *ngFor="let header of headers">
     <td style="margin-bottom: 20px; color: #6df884"> {{header}}:
       <input placeholder="____________"type="number" required #box (keyup)="setParam(box.value, header)"><br>

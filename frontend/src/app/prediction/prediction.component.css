@@ -11,7 +11,13 @@ color: white;
 margin-bottom: 20px;
 }
 
-
+.error{
+    text-align: center;
+    margin: 2%;
+    padding: 1%;
+    color: red;
+    border: dotted;
+}
 h4{
     font-size: 2em;
     display: inline-block;
