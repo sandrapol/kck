@@ -19,7 +19,7 @@ export class ModelDetailsComponent implements OnInit {
   ngOnInit() {
     this.upServ.getMNK().subscribe(
       elems=> {this.mnk=elems; console.log(this.mnk)},
-      err=>{console.log(err)},
+      err=>{this.router.navigateByUrl("")},
       ()=>this.loading=false
     ); 
   }

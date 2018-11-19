@@ -20,7 +20,7 @@ export class ParamChoiceComponent implements OnInit {
     this.loading=true;
     this.upService.hellwigMethod().subscribe(
       elem=> {this.choosenHeaders=elem},
-      err=>(console.log("Error while choosing hellwig!")),
+      err=>(this.router.navigateByUrl("")),
       ()=>{this.loading=false;}
     )
   }
@@ -28,7 +28,7 @@ export class ParamChoiceComponent implements OnInit {
     this.loading=true;
     this.upService.mnkWithHellwig().subscribe(
       event => { console.log('Model created'); },
-      err => { console.log(err); },
+      err => { console.log(err); this.router.navigateByUrl("") },
       () => {this.loading=false; this.submit(); }
     );
   }
