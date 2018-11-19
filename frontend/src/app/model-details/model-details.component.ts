@@ -1,6 +1,7 @@
 import { UploadService } from './../services/upload.service';
 import { Component, OnInit } from '@angular/core';
 import { MNK } from './MNK';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-model-details',
@@ -12,7 +13,7 @@ export class ModelDetailsComponent implements OnInit {
   private mnk: any;
   private headers: any;
   private loading = true;
-  constructor(private upServ: UploadService) { }
+  constructor(private upServ: UploadService, private router: Router) { }
 
   ngOnInit() {
     this.upServ.getMNK().subscribe(
@@ -24,6 +25,9 @@ export class ModelDetailsComponent implements OnInit {
   getParam(header: string){
     const index=this.mnk.headers.indexOf(header);
     return this.mnk.parameters[index+1]
+  }
+  goToPredictions(){
+    this.router.navigateByUrl("/predict")
   }
 
 }

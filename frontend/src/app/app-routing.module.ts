@@ -1,3 +1,4 @@
+import { PredictionComponent } from './prediction/prediction.component';
 import { ModelDetailsComponent } from './model-details/model-details.component';
 import { ParamChoiceComponent } from './param-choice/param-choice.component';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,8 @@ const routes: Routes = [
   {path: '',component: MainComponent},
   { path: 'home', component: HomeComponent },
   { path: 'choice', component: ParamChoiceComponent },
-  {path:'modelDetails', component: ModelDetailsComponent}
+  {path:'modelDetails', component: ModelDetailsComponent},
+  {path:'predict', component: PredictionComponent}
 
 ];
 
