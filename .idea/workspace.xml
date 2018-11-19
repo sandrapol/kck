@@ -2,80 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bacbd65-0f4f-45b8-a181-c84f295a55c5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/demo/src/main/resources/dane2_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/demo/src/main/resources/dane3_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/demo/src/main/resources/hellwig.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane10_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane11_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane12_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane13_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane14_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane15_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane16_1zmienna_czasowa.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane17_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane18_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane19_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane20_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane21_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane22_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane23_1zmienna_czasowa.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane24_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane25_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane2_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane3_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane4_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane5_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane6_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane7_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane8_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/dane9_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/daneduze.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/hellwig.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/demo/src/main/resources/dane2_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/demo/src/main/resources/dane3_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/demo/src/main/resources/hellwig.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane10_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane11_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane12_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane13_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane2_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane3_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane4_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane5_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane6_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane7_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane8_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/dane9_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/hellwig.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/demo/src/main/resources/dane2_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/demo/src/main/resources/dane3_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/demo/src/main/resources/hellwig.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane10_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane11_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane12_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane13_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane2_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane3_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane5_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane6_1zmienna.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane7_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane8_2zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/dane9_3zmienne.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/resources/hellwig.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/target/classes/resources/dane.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/target/classes/target/classes/resources/hellwig.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/controllers/UploadController.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/controllers/UploadController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/models/DividedData.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/models/DividedData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/ConstantFields.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/ConstantFields.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/DataGenerator.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/DataGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/HellwigMethod.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/HellwigMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/MNKGenerator.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/MNKGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/Predictions.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/Predictions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/validators/HeadersValidation.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/validators/HeadersValidation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/param-choice/param-choice.component.css" afterPath="$PROJECT_DIR$/frontend/src/app/param-choice/param-choice.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/param-choice/param-choice.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/param-choice/param-choice.component.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/demo/src/main/target/" />
@@ -113,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConstantFields.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConstantFields.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/ConstantFields.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
@@ -157,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state relative-caret-position="294">
+              <caret line="158" column="80" lean-forward="false" selection-start-line="158" selection-start-column="80" selection-end-line="158" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -268,8 +197,8 @@
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/validators/HeadersValidation.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/Predictions.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" />
       </list>
     </option>
   </component>
@@ -751,6 +680,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -767,7 +697,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.212098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.212098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1129,10 +1059,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/ConstantFields.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1147,10 +1077,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/ConstantFields.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="55" lean-forward="false" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        <state relative-caret-position="294">
+          <caret line="158" column="80" lean-forward="false" selection-start-line="158" selection-start-column="80" selection-end-line="158" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
