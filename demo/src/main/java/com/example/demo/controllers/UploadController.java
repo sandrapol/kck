@@ -51,10 +51,10 @@ public class UploadController {
             if (!file.isEmpty()) {
                 currentFile = file.getOriginalFilename();
                 csvValidation.validate(file.getOriginalFilename());
-                headersValidation.validate(file.getOriginalFilename());
                 InputStream is = file.getInputStream();
                 File targetFile = new File(fileLocalServerDirection + file.getOriginalFilename());
                 FileUtils.copyInputStreamToFile(is, targetFile);
+                headersValidation.validate(file.getOriginalFilename());
                 is.close();
                 return ResponseEntity.ok("File was uploaded");
             }
