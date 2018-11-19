@@ -45,6 +45,7 @@ public class UploadController {
      */
     @PostMapping(value = "/upload")
     public ResponseEntity<String> upload(@RequestParam MultipartFile file) {
+
         try {
             CsvValidation csvValidation = new CsvValidation();
             HeadersValidation headersValidation = new HeadersValidation();
@@ -145,10 +146,14 @@ public class UploadController {
 
 
     @RequestMapping(value = "/predict")
-    public ResponseEntity<MNKModel> predicate(@RequestParam int from, @RequestParam int to) {
-
-        predictions.createPredictions(from, to, mnk.getParameters());
-        return ResponseEntity.ok(mnk);
+    public ResponseEntity<Double> predicate(@RequestParam double[] userParams) {
+        Double pred=new Double(0);
+        try {
+           pred=  predictions.createPredictions(userParams, mnk.getParameters());
+        }catch(Exception e){
+            return ResponseFactory.ResponseError("Wrong parameters", "Wrong count of params");
+        }
+        return ResponseEntity.ok(pred);
     }
 }
 
