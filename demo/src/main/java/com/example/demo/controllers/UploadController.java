@@ -11,15 +11,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.List;
 
 import static com.example.demo.utils.ConstantFields.SUCCESS;
@@ -136,21 +134,28 @@ public class UploadController {
         else
             return ResponseFactory.ResponseError("Model not found!", "Model doesn't exist");
     }
+
     @RequestMapping("/getHeaders")
-    public ResponseEntity<List<String>> getHeaders(){
+    public ResponseEntity<List<String>> getHeaders() {
         if (mnk != null)
             return ResponseEntity.ok(mnk.getHeaders());
         else
             return ResponseFactory.ResponseError("Model not found!", "Model doesn't exist");
     }
 
+    @RequestMapping(value = "/predict", method = RequestMethod.GET)
+    public ResponseEntity<Double> predicate(@RequestParam(value = "userParams", required = false) String userParams) {
+        predictions=new Predictions();
 
-    @RequestMapping(value = "/predict")
-    public ResponseEntity<Double> predicate(@RequestParam double[] userParams) {
-        Double pred=new Double(0);
+        String[] splitted = userParams.replace("[", "").replace("]", "").split(",");
+        double[] doubleValues = Arrays.stream(splitted)
+                .mapToDouble(Double::parseDouble)
+                .toArray();
+        Double pred = new Double(0);
+
         try {
-           pred=  predictions.createPredictions(userParams, mnk.getParameters());
-        }catch(Exception e){
+            pred = predictions.createPredictions(doubleValues, mnk.getParameters());
+        } catch (Exception e) {
             return ResponseFactory.ResponseError("Wrong parameters", "Wrong count of params");
         }
         return ResponseEntity.ok(pred);

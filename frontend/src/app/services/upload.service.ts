@@ -22,7 +22,6 @@ export class UploadService {
     }
 
     hellwigMethod() {
-        
         return this.http.get('api/hellwig');
     }
 
@@ -38,5 +37,10 @@ export class UploadService {
     }
     getHeaders(){
         return this.http.get('api/getHeaders');
+    }
+    predict(param:[number]) {
+        JSON.stringify(param)
+        const params = new HttpParams().set('userParams', JSON.stringify(param))
+        return this.http.get('api/predict',{params});
     }
 }
