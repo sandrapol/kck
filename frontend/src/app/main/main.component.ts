@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
   name: any;
   currentFileUpload: File;
   fileName: string;
-
+  private error=false;
   constructor(private router: Router,private uploadServ: UploadService) { }
 
   ngOnInit() {
@@ -26,8 +26,8 @@ export class MainComponent implements OnInit {
 
     this.uploadServ.pushFileToStorage(this.currentFileUpload, this.fileName).subscribe(
       event => { console.log('File is completely uploaded!'); },
-      err => { console.log(err); },
-      () => {this.submit(); }
+      err => { console.log(err); this.error=true;},
+      () => {this.submit(); this.error=false; }
     );
     
   }

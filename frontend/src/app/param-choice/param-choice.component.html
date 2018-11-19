@@ -5,7 +5,7 @@
     <p>Czy chcesz użyć metody Hellwiga do wyboru zmiennych?</p>
     <div class="hellwigButtons">
       <label class="button1" (click)="hellwigMethodChoosen()">+-----+<br> | Tak |<br>
-        +-----+</label>
+        +-----+</label><p>&nbsp;</p>
       <label class="button2" (click)="createModel()">+-----+<br> | Nie |<br>
         +-----+</label>
     </div>
@@ -19,10 +19,8 @@
   <div *ngIf="choosenHeaders" class="hellwig">
     <p>Czy chcesz użyć tych zmiennych do stworzenia modelu, czy wszystkich?</p>
     <div class="hellwigButtons">
-      <label class="button1" (click)="modelWithHellwig()">+-----+<br> | Tak |<br>
-        +-----+</label>
-      <label class="button2" (click)="createModel()">+-----+<br> | Nie |<br>
-        +-----+</label>
+      <label class="button1" (click)="modelWithHellwig()">+-----+<br> | Tak |<br>+-----+</label><p>&nbsp;</p>
+      <label class="button2" (click)="createModel()">+-----+<br> | Nie |<br>+-----+</label>
     </div>
   </div>
 </div>
