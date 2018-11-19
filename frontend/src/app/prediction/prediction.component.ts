@@ -39,4 +39,7 @@ export class PredictionComponent implements OnInit {
     this.prediction=Math.round(this.prediction*1000)/1000
    }
 
+   repeat(){
+    this.router.navigateByUrl("");
+   }
 }
