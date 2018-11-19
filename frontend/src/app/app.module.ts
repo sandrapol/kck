@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { ParamChoiceComponent } from './param-choice/param-choice.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ChartComponent } from './chart/chart.component';
+import { PredictionComponent } from './prediction/prediction.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChartComponent } from './chart/chart.component';
     ParamChoiceComponent,
     LoadingComponent,
     ModelDetailsComponent,
-    ChartComponent
+    ChartComponent,
+    PredictionComponent
   ],
   imports: [
     BrowserModule,

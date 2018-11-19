@@ -4,11 +4,10 @@
 </div>
 <div class="cont" *ngIf="!loading">
   <p class="zRamka">Postać modelu:</p>
-  <p>y = {{mnk.parameters[0]}} + </p>
-  <tr *ngFor="let header of mnk.headers">
-     {{header}} *
-     {{getParam(header)}} 
-  </tr>
+  <div style="display: inline-block">
+  <div style="display: inline-block">y = {{mnk.parameters[0]}} </div>
+  <div style="display: inline-block" *ngFor="let header of mnk.headers"> + {{header}} * {{getParam(header)}} </div>
+</div>
   <p>Bledy ocen parametrów:</p>
   <tr *ngFor="let averageEstimateErro of mnk.averageEstimateError">
     <td> {{averageEstimateErro}} </td>
