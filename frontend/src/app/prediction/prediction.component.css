@@ -8,4 +8,27 @@ input{
 background-color: black;
 border: 0ch;
 color: white;
+margin-bottom: 20px;
+}
+
+
+h4{
+    font-size: 2em;
+    display: inline-block;
+}
+.togowno{
+    display: inline-block;
+    border: 1;
+    border-style: dotted;
+    padding: 5px;
+}
+p{
+    display: inline-block;
+    text-align: center;
+}
+
+.outer{
+    width: 100%;
+    text-align: center;
+    margin-left: 100%;
 }
