@@ -1,3 +1,4 @@
+import { HeaderComponent } from './../header/header.component';
 import { UploadService } from './../services/upload.service';
 import { Component, OnInit } from '@angular/core';
 import { MNK } from './MNK';
@@ -20,9 +21,19 @@ export class ModelDetailsComponent implements OnInit {
     this.upServ.getMNK().subscribe(
       elems=> {this.mnk=elems; console.log(this.mnk)},
       err=>{this.router.navigateByUrl("")},
-      ()=>this.loading=false
+      ()=>{this.loading=false; this.roundIt()}
     ); 
   }
+ roundIt(){
+  this.mnk.parameters=this.mnk.parameters.map(element => 
+     Math.round(element*1000)/1000
+   );
+   this.mnk.averageEstimateError=this.mnk.averageEstimateError.map(element => 
+    Math.round(element*1000)/1000
+  );
+  this.mnk.r2= Math.round(this.mnk.r2*1000)/1000;
+
+ }
   getParam(header: string){
     const index=this.mnk.headers.indexOf(header);
     return Math.round(this.mnk.parameters[index+1] *10000)/10000;
