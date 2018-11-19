@@ -1,3 +1,4 @@
+import { MNK } from './../model-details/MNK';
 import { UploadService } from './../services/upload.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -28,9 +29,13 @@ export class PredictionComponent implements OnInit {
     this.upServ.predict(this.params).subscribe(
       elem => { this.prediction = elem },
       err => {},
-      () => { }
+      () => { this.roundIt() }
     )
    console.log(this.params);
   }
+
+  roundIt(){
+    this.prediction=Math.round(this.prediction*1000)/1000
+   }
 
 }
