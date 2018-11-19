@@ -12,9 +12,9 @@
   </div>
   <div *ngIf="choosenHeaders">
     <p>Metodą Helliwga wybrano zmienne:</p>
-    <tr *ngFor="let choosenHeader of choosenHeaders">
-      <td> {{choosenHeader}} </td>
-    </tr>
+    <div *ngFor="let choosenHeader of choosenHeaders">
+      <div class="header"> <span style="color: #6df884">o </span>{{choosenHeader}}</div> 
+    </div>
   </div>
   <div *ngIf="choosenHeaders" class="hellwig">
     <p>Czy chcesz użyć tych zmiennych do stworzenia modelu, czy wszystkich?</p>

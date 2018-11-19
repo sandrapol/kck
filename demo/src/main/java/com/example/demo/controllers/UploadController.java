@@ -156,7 +156,7 @@ public class UploadController {
         try {
             pred = predictions.createPredictions(doubleValues, mnk.getParameters());
         } catch (Exception e) {
-            return ResponseFactory.ResponseError("Wrong parameters", "Wrong count of params");
+            return ResponseFactory.ResponseError("Wrong parameters", "Wrong number of params");
         }
         return ResponseEntity.ok(pred);
     }
