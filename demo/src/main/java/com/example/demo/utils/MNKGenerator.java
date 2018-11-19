@@ -54,10 +54,8 @@ public class MNKGenerator {
     //extractVector(false,0)
     private void paramsToList(){
         double[] parameters= new double[params.numRows()];
-        params.print();
         for(int i=0;i<params.numRows();i++)
         {
-            System.out.println(params.get(i,0));
             parameters[i]=params.get(i,0);
         }
         mnkModel.setParameters(parameters);
@@ -72,16 +70,13 @@ public class MNKGenerator {
         mnkModel.setResidualVariance(variance);
         double standardDeviation = sqrt(variance);
         mnkModel.setStandardDeviation(standardDeviation);
-        System.out.println(variance);
         SimpleMatrix xtx1 = xData.transpose().mult(xData).invert();
         SimpleMatrix varCovMatrix = xtx1.scale(variance);
         SimpleMatrix diag = varCovMatrix.diag();
         SimpleMatrix averageEstimateError = diag.elementPower(0.5);
         double[] avgErr= new double[averageEstimateError.numRows()];
-        averageEstimateError.print();
         for(int i=0;i<averageEstimateError.numRows();i++)
         {
-            System.out.println(averageEstimateError.get(i,0));
            avgErr[i]=averageEstimateError.get(i,0);
         }
         mnkModel.setAverageEstimateError(avgErr);
