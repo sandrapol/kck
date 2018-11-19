@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bacbd65-0f4f-45b8-a181-c84f295a55c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/controllers/UploadController.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/controllers/UploadController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/ConstantFields.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/ConstantFields.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/DataGenerator.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/DataGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/HellwigMethod.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/utils/HellwigMethod.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/validators/HeadersValidation.class" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/com/example/demo/validators/HeadersValidation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/model-details/model-details.component.html" afterPath="$PROJECT_DIR$/frontend/src/app/model-details/model-details.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/ConstantFields.java" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/ConstantFields.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/resources/hellwig.csv" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/resources/hellwig.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/hellwig.csv" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/resources/hellwig.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/hellwig.csv" afterPath="$PROJECT_DIR$/demo/src/main/target/classes/target/classes/target/classes/resources/hellwig.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/src/app/chart/chart.component.ts" afterPath="$PROJECT_DIR$/frontend/src/app/chart/chart.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/demo/src/main/target/" />
@@ -29,7 +37,7 @@
       <file leaf-file-name="MNKModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
+            <state relative-caret-position="432">
               <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding>
                 <element signature="method#MNKModel#0;class#MNKModel#0" expanded="false" />
@@ -39,16 +47,6 @@
                 <element signature="e#671#672#0" expanded="true" />
                 <element signature="e#715#716#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/main/main.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="82" lean-forward="false" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -65,11 +63,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HellwigMethod.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
+              <folding>
+                <element signature="e#1677#1678#0" expanded="true" />
+                <element signature="e#1774#1775#0" expanded="true" />
+                <element signature="e#1859#1860#0" expanded="true" />
+                <element signature="e#1906#1907#0" expanded="true" />
+                <element signature="method#countAllCapacity#0;class#HellwigMethod#0" expanded="false" />
+                <element signature="method#generateRMatrix#0;class#HellwigMethod#0" expanded="false" />
+                <element signature="method#getCorrelation#0;class#HellwigMethod#0" expanded="false" />
+                <element signature="method#getMax#0;class#HellwigMethod#0" expanded="false" />
+                <element signature="method#createNCr#0;class#HellwigMethod#0" expanded="false" />
+                <element signature="method#nCr#0;class#HellwigMethod#0" expanded="false" />
+                <element signature="method#getNext#0;class#HellwigMethod#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dane3_3zmienne.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/src/main/resources/dane3_3zmienne.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="131" column="46" lean-forward="false" selection-start-line="131" selection-start-column="46" selection-end-line="131" selection-end-column="46" />
+            <state relative-caret-position="2000">
+              <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,8 +110,8 @@
       <file leaf-file-name="MNKGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+            <state relative-caret-position="256">
+              <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,7 +142,7 @@
       <file leaf-file-name="HeadersValidation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/validators/HeadersValidation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
+            <state relative-caret-position="240">
               <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -137,25 +167,6 @@
                 <element signature="e#641#642#0" expanded="true" />
                 <element signature="e#681#682#0" expanded="true" />
                 <element signature="e#713#714#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/DataGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="82" column="38" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="82" selection-end-column="38" />
-              <folding>
-                <marker date="1542560820786" expanded="true" signature="723:904" ph="{...}" />
-                <marker date="1542560820786" expanded="true" signature="944:954" ph=" { " />
-                <marker date="1542560820786" expanded="true" signature="973:979" ph=" }" />
-                <marker date="1542560820786" expanded="true" signature="1019:1403" ph="{...}" />
-                <marker date="1542560820786" expanded="false" signature="1455:1657" ph="{...}" />
-                <marker date="1542560820786" expanded="true" signature="1693:2288" ph="{...}" />
-                <marker date="1542560820786" expanded="true" signature="2320:2533" ph="{...}" />
-                <marker date="1542560820786" expanded="true" signature="2569:3201" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -201,15 +212,15 @@
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/Combination.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/DividedData.java" />
         <option value="$PROJECT_DIR$/demo/src/main/pom.xml" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/DataGenerator.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/validators/HeadersValidation.java" />
         <option value="$PROJECT_DIR$/demo/src/main/resources/dane.csv" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/Predictions.java" />
-        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/ConstantFields.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java" />
         <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/ConstantFields.java" />
+        <option value="$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java" />
       </list>
     </option>
   </component>
@@ -243,7 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,6 +263,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -342,8 +366,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -633,6 +658,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -644,13 +670,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24292845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24292845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20903522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.212098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -658,34 +683,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39767054" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39767054" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24292845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20903522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -733,14 +736,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/ResponseFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/validators/CsvValidation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -886,9 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,25 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="method#newHeaders#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#countAllCapacity#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#countCapacity#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#generateR0#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#generateRMatrix#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#getCorrelation#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#getMax#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#createNCr#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#nCr#0;class#HellwigMethod#0" expanded="false" />
-            <element signature="method#getNext#0;class#HellwigMethod#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/ejml/ejml-core/0.37/ejml-core-0.37.jar!/org/ejml/data/DMatrixRMaj.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -973,17 +946,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/DataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="1040">
           <caret line="82" column="38" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="82" selection-end-column="38" />
           <folding>
-            <marker date="1542560820786" expanded="true" signature="723:904" ph="{...}" />
-            <marker date="1542560820786" expanded="true" signature="944:954" ph=" { " />
-            <marker date="1542560820786" expanded="true" signature="973:979" ph=" }" />
-            <marker date="1542560820786" expanded="true" signature="1019:1403" ph="{...}" />
-            <marker date="1542560820786" expanded="false" signature="1455:1657" ph="{...}" />
-            <marker date="1542560820786" expanded="true" signature="1693:2288" ph="{...}" />
-            <marker date="1542560820786" expanded="true" signature="2320:2533" ph="{...}" />
-            <marker date="1542560820786" expanded="true" signature="2569:3201" ph="{...}" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="method#lineToDouble#0;class#DataGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -998,7 +966,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/validators/HeadersValidation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="240">
           <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1035,8 +1003,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/MNKGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state relative-caret-position="256">
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding>
+            <element signature="method#MNKModel#0;class#MNKModel#0" expanded="false" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1053,27 +1046,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/models/MNKModel.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/resources/dane3_3zmienne.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding>
-            <element signature="method#MNKModel#0;class#MNKModel#0" expanded="false" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="128">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/controllers/UploadController.java">
+    <entry file="file://$PROJECT_DIR$/demo/src/main/java/com/example/demo/utils/HellwigMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="131" column="46" lean-forward="false" selection-start-line="131" selection-start-column="46" selection-end-line="131" selection-end-column="46" />
+        <state relative-caret-position="306">
+          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1774#1775#0" expanded="true" />
+            <element signature="e#1859#1860#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="method#countAllCapacity#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#generateRMatrix#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#getCorrelation#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#getMax#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#createNCr#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#nCr#0;class#HellwigMethod#0" expanded="false" />
+            <element signature="method#getNext#0;class#HellwigMethod#0" expanded="false" />
           </folding>
         </state>
       </provider>

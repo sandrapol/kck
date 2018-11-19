@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
 
 import static java.lang.Math.abs;
 
@@ -38,27 +39,35 @@ public class HellwigMethod {
         countAllCapacity();
         combinationsList.forEach(elem -> elem.calculateCapacity());
         getMax();
-        combinationsList.stream().filter(elem->elem.getCapacitySum()==max);
+        combinationsList = combinationsList.stream().filter(elem -> elem.getCapacitySum() == max).collect(Collectors.toList());
         newHeaders();
     }
-    public Double[][] getDividedData(){
+
+    public Double[][] getDividedData() {
         dividedData.getHellwigData(combinationsList.get(0).getIndexesVariable());
-        return  dividedData.getDataMatrix();
+        return dividedData.getDataMatrix();
     }
-    public int[] getIndexes(){
+
+    public int[] getIndexes() {
         return combinationsList.get(0).getIndexesVariable();
     }
-    public Double[] getY(){
+
+    public Double[] getY() {
         return dividedData.getYdata();
     }
-    public List<String> getHeaders(){return dividedData.getHeaders();}
-    private void newHeaders(){
+
+    public List<String> getHeaders() {
+        return dividedData.getHeaders();
+    }
+
+    private void newHeaders() {
         List<String> headers = dividedData.getHeaders();
-        List<String> newHeaders= new ArrayList<>();
+        List<String> newHeaders = new ArrayList<>();
         int[] indexesVariable = combinationsList.get(0).getIndexesVariable();
-        Arrays.stream(indexesVariable).forEach(elem->newHeaders.add(headers.get(elem)) );
+        Arrays.stream(indexesVariable).forEach(elem -> newHeaders.add(headers.get(elem)));
         dividedData.setHeaders(newHeaders);
     }
+
     private void countAllCapacity() {
         combinationsList.forEach(elem -> elem.setInformationCapacity(countCapacity(elem.getIndexesVariable())));
     }
