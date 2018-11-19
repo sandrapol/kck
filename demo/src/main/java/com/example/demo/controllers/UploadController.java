@@ -53,7 +53,7 @@ public class UploadController {
                 InputStream is = file.getInputStream();
                 File targetFile = new File(fileLocalServerDirection + file.getOriginalFilename());
                 FileUtils.copyInputStreamToFile(is, targetFile);
-                //headersValidation.validate(file.getOriginalFilename());
+                headersValidation.validate(file.getOriginalFilename());
                 is.close();
                 return ResponseEntity.ok("File was uploaded");
             }
