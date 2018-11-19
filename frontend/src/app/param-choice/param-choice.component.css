@@ -20,12 +20,14 @@
     float: right;
     margin-left: 1%;
     margin-right: 1%;
+    color: #6df884
 }
 
 .button2{
     display: inline-flex;
     margin-left: 1%;
     margin-right: 1%;
+    color: #6df884;
 }
 .hellwig{
     width: 100%;  

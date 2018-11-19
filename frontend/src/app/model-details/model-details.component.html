@@ -4,26 +4,26 @@
 </div>
 <div class="cont" *ngIf="!loading">
   <div class="zRamka">
-  <p>Postać modelu:</p>
+  <p style="color:#6df884">Postać modelu:</p>
   <div style="display: inline-block">
   <div style="display: inline-block">y = {{mnk.parameters[0]}} </div>
-  <div style="display: inline-block" *ngFor="let header of mnk.headers"> + {{header}} * {{getParam(header)}} </div>
+  <div style="display: inline-block" *ngFor="let header of mnk.headers"> &nbsp; + {{header}} * {{getParam(header)}} </div>
     </div>
 </div>
 <label *ngIf = "!clicked" class="button1" (click)="more()">+--------+<br> | Więcej |<br>
   +--------+</label>
 <div class="zRamka" *ngIf = "clicked"> 
-<p>Bledy ocen parametrów:</p>
+<p style="color:#6df884">Bledy ocen parametrów:</p>
   <tr *ngFor="let averageEstimateErro of mnk.averageEstimateError">
     <td> {{averageEstimateErro}} </td>
   </tr>
-  <p>Wspólczynnik zmiennosci resztowej</p>
+  <p style="color:#6df884">Wspólczynnik zmiennosci resztowej</p>
   <p>{{mnk.crv}}</p>
-  <p>Wspólczynnik determinacji R2:</p>
+  <p style="color:#6df884">Wspólczynnik determinacji R2:</p>
   <p>{{mnk.r2}}</p>
-  <p>Wariancja resztowa:</p>
+  <p style="color:#6df884">Wariancja resztowa:</p>
   <p>{{mnk.residualVariance}}</p>
-  <p>Odchylenie standardowe:</p>
+  <p style="color:#6df884">Odchylenie standardowe:</p>
   <p>{{mnk.standardDeviation}}</p>
     </div>
   <label class="button1" (click)="goToPredictions()">+------------------+<br> | Idź do predykcji |<br>

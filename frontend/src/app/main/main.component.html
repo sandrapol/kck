@@ -29,6 +29,22 @@
         <div><span style="color:#6df884;"> .........`8.`...`8'...........8 8888.......8 8888.8'.......`8. `88888.
                 ..`Y888888'...</span></div>
     </div>
+    <div class="opis">
+        Witamy na stronie slużącej budowaniu modelu ekonometrycznego w postaci modelu regresji liniowej. Z jej pomocą mogą Państwo zbudować model oraz ocenić jego dopasowanie do danych empirycznych. Dodatkowo mają Państwo możliwosć dokonania prognozy.
+    </div>
+<div class="strzalka">
+...............hMMh............<br>                           
+...............hMMh............<br>                   
+...............hMMh............<br>                   
+.`oh-..........ohho........-ho` <br>       
+..`hMMMh-......ohho......-hMMMh<br>        
+...-hMMMh-....hMMh....-hMMMh-<br>         
+....-hMMMh-...hMMh...-hMMMh-.<br>          
+......-hMMMh:......:hMMMh-... <br>            
+..........-hMMMhhMMMh-....... <br>           
+............-hMMMMh-........  <br>               
+..............-hh- ......... <br>                              
+</div>
     <div class="welcome">
         Proszę wybrać plik z danymi. Plik MUSI być w formacie .csv.<br> Naglowek odpowiadający zmiennej objasnianej
         musi nosić nazwę "y" lub "Y". <br>
@@ -38,10 +54,10 @@
 
     <div class="upload">
         <input hidden id="input-file-id" type="file" (change)="selectFile($event)">
-        <label for="input-file-id" class="uploadbutton">+--------------+<br> | Wybierz plik |<br>
+        <label style="color:#6df884" for="input-file-id" class="uploadbutton">+--------------+<br> | Wybierz plik |<br>
             +--------------+</label>
         <label class="name">{{fileName ? fileName : 'plik'}}</label>
-        <label *ngIf="fileName" class="uploadbutton" (click)="upload()">+----+<br> | OK |<br>
+        <label style="color:#6df884" *ngIf="fileName" class="uploadbutton" (click)="upload()">+----+<br> | OK |<br>
             +----+</label>
     </div>
 

@@ -6,6 +6,20 @@
 }
 .welcome{
     margin-top:3%;
+    border: 1;
+    border-style: dotted;
+    border-spacing: 0.5;
+    padding: 5px;
+}
+
+.opis{
+    margin-top:3%;
+    margin-bottom: 3%;
+    border: 1;
+    border-style: dotted;
+    border-spacing: 0.5;
+    padding: 5px;
+
 }
 .napis{
     text-align: center;
@@ -31,4 +45,9 @@
     color:grey;
     text-decoration-line: underline;
     padding: 6px 12px;
+}
+
+.strzalka{
+    font-size: 100%;
+    text-align: center;
 }

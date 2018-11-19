@@ -31,12 +31,16 @@ export class ModelDetailsComponent implements OnInit {
    this.mnk.averageEstimateError=this.mnk.averageEstimateError.map(element => 
     Math.round(element*1000)/1000
   );
-  this.mnk.r2= Math.round(this.mnk.r2*1000)/1000;
+  this.mnk.r2= Math.round(this.mnk.r2*100000)/100000;
+  this.mnk.crv = Math.round(this.mnk.crv*100000)/100000;
+  this.mnk.residualVariance = Math.round(this.mnk.residualVariance*100000)/100000;
+  this.mnk.standardDeviation = Math.round(this.mnk.standardDeviation*100000)/100000;
+  
 
  }
   getParam(header: string){
     const index=this.mnk.headers.indexOf(header);
-    return Math.round(this.mnk.parameters[index+1] *10000)/10000;
+    return Math.round(this.mnk.parameters[index+1] *100000)/100000;
   }
   goToPredictions(){
     this.router.navigateByUrl("/predict")
