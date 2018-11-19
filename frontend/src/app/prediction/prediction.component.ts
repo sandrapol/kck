@@ -21,7 +21,6 @@ export class PredictionComponent implements OnInit {
     )
   }
   setParam(value, header){
-    console.log(header + ": "+value);
     this.params[this.headers.indexOf(header)]=Number(value);
   }
 

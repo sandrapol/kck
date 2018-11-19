@@ -3,7 +3,7 @@
   <p>janek uzupenij dzieciaku</p>
   <tr *ngFor="let header of headers">
     <td> {{header}}
-      <input required #box (keyup)="setParam(box.value, header)"><br>
+      <input type="number" required #box (keyup)="setParam(box.value, header)"><br>
     </td>
   </tr>
   <label class="button1" (click)="predict()">+----+<br> | OK |<br>+----+</label>
