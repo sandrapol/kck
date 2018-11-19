@@ -3,11 +3,11 @@
   <app-loading></app-loading>
 </div>
 <div class="cont" *ngIf="!loading">
-  <p>Postać modelu:</p>
-  <p>y = {{mnk.parameters[0]}} + {{getParam(></p>
+  <p class="zRamka">Postać modelu:</p>
+  <p>y = {{mnk.parameters[0]}} + </p>
   <tr *ngFor="let header of mnk.headers">
-    <td> {{header}} </td>
-    <td> {{getParam(header)}} </td>
+     {{header}} *
+     {{getParam(header)}} 
   </tr>
   <p>Bledy ocen parametrów:</p>
   <tr *ngFor="let averageEstimateErro of mnk.averageEstimateError">
