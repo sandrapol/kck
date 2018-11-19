@@ -13,7 +13,7 @@
 <label *ngIf = "!clicked" class="button1" (click)="more()">+--------+<br> | Więcej |<br>
   +--------+</label>
 <div class="zRamka" *ngIf = "clicked"> 
-<p style="color:#6df884">Błędy ocen parametrów:</p>
+<p style="color:#6df884">Średnie błędy ocen parametrów:</p>
   <tr *ngFor="let averageEstimateErro of mnk.averageEstimateError">
     <td> {{averageEstimateErro}} </td>
   </tr>
