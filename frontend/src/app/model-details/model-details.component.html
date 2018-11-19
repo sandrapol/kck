@@ -13,13 +13,13 @@
 <label *ngIf = "!clicked" class="button1" (click)="more()">+--------+<br> | Więcej |<br>
   +--------+</label>
 <div class="zRamka" *ngIf = "clicked"> 
-<p style="color:#6df884">Bledy ocen parametrów:</p>
+<p style="color:#6df884">Błędy ocen parametrów:</p>
   <tr *ngFor="let averageEstimateErro of mnk.averageEstimateError">
     <td> {{averageEstimateErro}} </td>
   </tr>
-  <p style="color:#6df884">Wspólczynnik zmiennosci resztowej</p>
+  <p style="color:#6df884">Współczynnik zmienności resztowej</p>
   <p>{{mnk.crv}}</p>
-  <p style="color:#6df884">Wspólczynnik determinacji R2:</p>
+  <p style="color:#6df884">Współczynnik determinacji R2:</p>
   <p>{{mnk.r2}}</p>
   <p style="color:#6df884">Wariancja resztowa:</p>
   <p>{{mnk.residualVariance}}</p>
